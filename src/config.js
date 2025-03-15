@@ -13,9 +13,5 @@ export const CONFIG = {
       path: 'dataset/formatted',
     },
       // Additional repositories can be added here
-  ],
-  OPENAI_MODEL_PRICING: {
-    'gpt-4o': { promptTokenCost: 2.5/1000000, completionTokenCost: 10/1000000 },
-    'gpt-4o-mini': { promptTokenCost: 0.15/1000000, completionTokenCost: 0.6/1000000 }
-  }
+  ]
 }
