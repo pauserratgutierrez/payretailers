@@ -57,8 +57,13 @@ export class AgentModel {
           const ghFileContent = await GHContent(download_url)
           const fileObj = await toFile(Buffer.from(ghFileContent), name)
   
-          await this.openai.vectorStores.files.del(vectorStore.id, vsFile.id)
-          await this.openai.files.del(vsFile.file_id)
+          try {
+            if (vsFile.id) await this.openai.vectorStores.files.del(vectorStore.id, vsFile.id)
+            if (vsFile.file_id) await this.openai.files.del(vsFile.file_id)
+          } catch (error) {
+            console.warn(`Error deleting file ${name}: ${error.message}`)
+          }
+
           const openaiFile = await this.openai.files.create({ file: fileObj, purpose: 'user_data' })
   
           await this.openai.vectorStores.files.createAndPoll(vectorStore.id, {
@@ -82,9 +87,13 @@ export class AgentModel {
       // DELETED
       for (const vsFile of vsFiles) {
         if (!ghFilesMap.has(vsFile.attributes.gh_name)) {
-          await this.openai.vectorStores.files.del(vectorStore.id, vsFile.id)
-          await this.openai.files.del(vsFile.file_id)
-          console.log(`File Deleted: ${vsFile.attributes.gh_name}`)
+          try {
+            if (vsFile.id) await this.openai.vectorStores.files.del(vectorStore.id, vsFile.id)
+            if (vsFile.file_id) await this.openai.files.del(vsFile.file_id)
+            console.log(`File Deleted: ${vsFile.attributes.gh_name}`)
+          } catch (error) {
+            console.warn(`Error deleting file ${vsFile.attributes.gh_name}: ${error.message}`)
+          }
         }
       }
     }
@@ -115,6 +124,8 @@ export class AgentModel {
         console.log('Vector Store created with ID:', vectorStore.id)
   
         await processFiles(vectorStore, ghFiles, vsMK, vsMV)
+        console.log('Dataset setup complete.')
+        return { vectorStoreId: vectorStore.id }
       } else {
         // Sync existing Vector Store
         console.log('Syncing existing Vector Store with ID:', vectorStore.id)
@@ -134,11 +145,39 @@ export class AgentModel {
         }
     
         console.log('Dataset setup complete.')
-  
         return { vectorStoreId: vectorStore.id }
       }  
     } catch (error) {
       console.error('Error in setupDataset:', error)
+      throw error
+    }
+  }
+
+  async getResponse({ input, vectorStoreId, previous_response_id }) {
+    try {
+      const response = await this.openai.responses.create({
+        input,
+        model: 'gpt-4o-mini',
+        instructions: `Ets 'PayRetailers Agent', l'agent d'intel·ligència artificial per a PayRetailers. Tens accés a tota la informació de la pàgina web https://payretailers.com/ i https://payretailers.dev/ mitjançant la file_search tool. Sempre que retornis codi, el codi ha d'anar envoltat en un bloc de codi markdown (tres cometes inverses). Si no trobes la info que necessites, digues-ho obertament. No intentis inventar. Si necessites més context, demana'l`,
+        previous_response_id,
+        store: true,
+        stream: false,
+        temperature: 0.4,
+        tool_choice: { type: 'file_search' },
+        tools: [
+          {
+            type: 'file_search',
+            vector_store_ids: [vectorStoreId],
+            max_num_results: 10,
+            ranking_options: { ranker: 'auto', score_threshold: 0.7 }
+          }
+        ],
+        truncation: 'auto'
+      })
+      return response
+    } catch (error) {
+      console.error('Error in getResponse:', error)
+      throw error
     }
   }
 }
