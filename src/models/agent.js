@@ -173,7 +173,7 @@ export class AgentModel {
             type: 'file_search',
             vector_store_ids: [vectorStoreId],
             max_num_results: 16,
-            ranking_options: { ranker: 'auto', score_threshold: 0.5 }
+            ranking_options: { ranker: 'auto', score_threshold: 0.3 }
           }
         ],
         truncation: 'auto'

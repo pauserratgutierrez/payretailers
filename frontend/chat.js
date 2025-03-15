@@ -131,6 +131,21 @@ chatSendButton.style.color = '#fff';
 chatSendButton.style.border = 'none';
 chatSendButton.style.cursor = 'pointer';
 
+function parseMarkdown(markdown) {
+    // Convert markdown to HTML with styling
+    return markdown
+        .replace(/^### (.*$)/gm, '<h3 style="font-size: 17px; margin: 0; font-weight:500;">$1</h3>')
+        .replace(/^## (.*$)/gm, '<h2 style="font-size: 17px; margin: 0; font-weight:700;">$1</h2>')
+        .replace(/^# (.*$)/gm, '<h1 style="font-size: 17px; margin: 0; font-weight:900;">$1</h1>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong style="font-weight: 600;">$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em style="font-style: italic;">$1</em>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color: rgb(20, 67, 147); text-decoration: none;">$1</a>')
+        .replace(/- (.*$)/gm, '<li>$1</li>')
+        .replace(/<li>(.*?)<\/li>/g, '<ul style="margin: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important;"><li>$1</li></ul>')
+        .replace(/<\/ul><ul.*?>/g, '') 
+        .replace(/\n+/g, '<br style="margin: 0; padding: 0;">');
+}
+
 const getResponseDiv = (mockResponse) =>{
     const parts = mockResponse.split('```');
     const responseDiv = document.createElement('div');
@@ -140,12 +155,13 @@ const getResponseDiv = (mockResponse) =>{
     parts.forEach((part, index) => {
         if (index % 2 === 0) {
             // Regular message part
-            const messagePart = messageComponent(part, 'receive');
+            const messagePart = messageComponent(parseMarkdown(part), 'receive');
             responseDiv.appendChild(messagePart);
         } else {
             // Code part
             const codePart = document.createElement('pre');
             codePart.style.fontSize = '15px';
+            codePart.style.fontWeight = '300';
             codePart.textContent = part;
             codePart.style.backgroundColor = '#f4f4f4';
             codePart.style.padding = '8px 12px';
@@ -191,8 +207,9 @@ const getResponseDiv = (mockResponse) =>{
 
 const messageComponent = (message, mode) => {
     const messageElement = document.createElement('div');
-    messageElement.textContent = message;
+    messageElement.innerHTML = message;
     messageElement.style.fontSize = '15px';
+    messageElement.style.fontWeight = '300';
     messageElement.style.lineHeight = '1.5';
     messageElement.style.wordWrap = 'break-word';
     if (mode === 'send'){
@@ -204,7 +221,6 @@ const messageComponent = (message, mode) => {
     } else {
         messageElement.style.minHeight = '20px';
         messageElement.style.padding = '0px 6px';
-        messageElement.textContent = message;
         messageElement.style.alignSelf = 'flex-start';
         messageElement.style.maxWidth = '100%';
         if (mode === "err"){
@@ -213,6 +229,9 @@ const messageComponent = (message, mode) => {
     }
     return messageElement;
 }
+const a = getResponseDiv("Soc l'assistent de PayRetailers. Com puc ajudar-te?");
+chatBody.appendChild(a);
+scrollToElement(a, 110);
 
 var previousResponseId;
 
@@ -246,40 +265,29 @@ async function manageSend() {
             }
         })()
         //comentar
-        // Wait for 3 seconds before removing typing indicator
-        // setTimeout(() => {
-        //     charging = false;
-        //     chatBody.removeChild(typingIndicator);
-        //     const mockResponse = `Thanks for your message! We appreciate your input and will get back to you shortly. Here's code:\n\`\`\`const responseDiv = document.createElement('div');
-        //     responseDiv.style.display = 'flex';
-        //     responseDiv.style.flexDirection = 'column';
-        //     responseDiv.style.gap = '4px';
-        //     parts.forEach((part, index) => {
-        //         if (index % 2 === 0) {
-        //             // Regular message part
-        //             const messagePart = messageComponent(part, 'receive');
-        //             responseDiv.appendChild(messagePart);
-        //         } else {
-        //             // Code part
-        //             const codePart = document.createElement('pre');
-        //             codePart.textContent = part;\`\`\`If you have any further questions, feel free to ask!\n\`\`\`const responseDiv = document.createElement('div');
-        //             responseDiv.style.display = 'flex';
-        //             responseDiv.style.flexDirection = 'column';
-        //             responseDiv.style.gap = '4px';
-        //             parts.forEach((part, index) => {
-        //                 if (index % 2 === 0) {
-        //                     // Regular message part
-        //                     const messagePart = messageComponent(part, 'receive');
-        //                     responseDiv.appendChild(messagePart);
-        //                 } else {
-        //                     // Code part
-        //                     const codePart = document.createElement('pre');
-        //                     codePart.textContent = part;\`\`\`aaaaaaaaaaaaa`;
+        //Wait for 3 seconds before removing typing indicator
+//         setTimeout(() => {
+//             charging = false;
+//             chatBody.removeChild(typingIndicator);
+//             const mockResponse = `# PayRetailers
 
-        //     const responseDiv = getResponseDiv(mockResponse);
-        //     chatBody.appendChild(responseDiv);
-        //     scrollToElement(responseDiv,110);
-        // }, 0); 
+// PayRetailers és un proveïdor líder de serveis de pagament en línia, fundat el 2017, amb seu a Espanya i oficines regionals a diversos països d'Amèrica Llatina, com Mèxic, Argentina, Brasil, i altres. Ofereix més de 250 mètodes de pagament locals, facilitant així que els comerços acceptin pagaments en diverses monedes sense necessitat d'una entitat local.
+
+// ### Característiques Clau:
+// - **Integració Senzilla**: La seva API permet una integració ràpida amb plataformes de comerç electrònic, millorant l'experiència de compra dels clients.
+// - **Seguretat**: Utilitza tecnologia de tokenització per protegir les dades de pagament, garantint la seguretat en les transaccions.
+// - **Suport Local**: Disposa d'un equip d'experts en cada país on opera, proporcionant assessorament sobre els mètodes de pagament més adequats per a cada mercat.
+
+// ### Beneficis:
+// - **Augment de Conversió**: Acceptar mètodes de pagament locals pot incrementar la taxa de conversió i la satisfacció del client.
+// - **Cobertura Regional**: Permet a les empreses expandir-se a mercats emergents amb un enfocament en les necessitats locals.
+
+// Si necessites més informació específica o detalls sobre un aspecte concret de PayRetailers, no dubtis a preguntar!`;
+
+//             const responseDiv = getResponseDiv(mockResponse);
+//             chatBody.appendChild(responseDiv);
+//             scrollToElement(responseDiv,110);
+//         }, 0); 
         //fins aquí
 
         //descomentar        
