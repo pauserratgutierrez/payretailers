@@ -4,6 +4,17 @@ const floatingButton = document.createElement('button');
 
 var opened = false;
 
+const APIurl = 'http://localhost:8888/agent';
+const dataSetEndpoint = '/dataset/setup';
+const responseEndpoint = '/response';
+
+const {vectorStoreId} = fetch(APIurl + dataSetEndpoint, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+
 // Afegir classes i estil al botó
 floatingButton.classList.add('floating-button');
 floatingButton.innerHTML = '🛟'; // Si vols utilitzar Font Awesome, o posar text com "+"
@@ -13,8 +24,8 @@ floatingButton.style.boxSizing = 'border-box';
 floatingButton.style.position = 'fixed';
 floatingButton.style.bottom = '20px';
 floatingButton.style.right = '20px';
-floatingButton.style.width = '60px';
-floatingButton.style.height = '60px';
+floatingButton.style.width = '50px';
+floatingButton.style.height = '50px';
 floatingButton.style.borderRadius = '50%';
 floatingButton.style.backgroundColor = "#f9c32f";
 floatingButton.style.color = '#fff';
@@ -44,7 +55,7 @@ chatContainer.style.bottom = '90px';
 chatContainer.style.right = '20px';
 chatContainer.style.width = '450px';
 chatContainer.style.height = '600px';
-chatContainer.style.borderRadius = '10px';
+chatContainer.style.borderRadius = '6px';
 chatContainer.style.backgroundColor = '#fff';
 chatContainer.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
 chatContainer.style.zIndex = '1000';
@@ -72,15 +83,18 @@ chatBody.style.overflowY = 'auto';
 
 // Funció per fer scroll fins a baix
 const scrollToBottom = () => {
-    chatBody.scrollTop = chatBody.scrollHeight;
+    chatBody.scrollTo({
+        top: chatBody.scrollHeight,
+        behavior: 'smooth'
+    });
 };
 
-// Fer scroll fins a baix quan s'afegeix un nou missatge
-const observer = new MutationObserver(scrollToBottom);
-observer.observe(chatBody, { childList: true });
-
-// Fer scroll fins a baix inicialment
-scrollToBottom();
+const scrollToElement = (element, offset) => { 
+    chatBody.scrollTo({
+        top: element.offsetTop - offset,
+        behavior: 'smooth'
+    });
+}
 
 // Crear l'input del chatbot
 const chatInputContainer = document.createElement('div');
@@ -103,33 +117,100 @@ chatSendButton.style.color = '#fff';
 chatSendButton.style.border = 'none';
 chatSendButton.style.cursor = 'pointer';
 
+const getResponseDiv = (mockResponse) =>{
+    const parts = mockResponse.split('```');
+    const responseDiv = document.createElement('div');
+    responseDiv.style.display = 'flex';
+    responseDiv.style.flexDirection = 'column';
+    responseDiv.style.gap = '4px';
+    parts.forEach((part, index) => {
+        if (index % 2 === 0) {
+            // Regular message part
+            const messagePart = messageComponent(part, 'receive');
+            responseDiv.appendChild(messagePart);
+        } else {
+            // Code part
+            const codePart = document.createElement('pre');
+            codePart.style.fontSize = '15px';
+            codePart.textContent = part;
+            codePart.style.backgroundColor = '#f4f4f4';
+            codePart.style.padding = '8px 12px';
+            codePart.style.borderRadius = '6px';
+            codePart.style.overflowX = 'auto';
+            codePart.style.margin = '4px 0';
+            
+            // Crear el botó de copiar
+            const copyButton = document.createElement('button');
+            copyButton.textContent = 'Copiar';
+            copyButton.style.position = 'absolute';
+            copyButton.style.top = '11px';
+            copyButton.style.right = '6px';
+            copyButton.style.padding = '4px 8px';
+            copyButton.style.fontSize = '12px';
+            copyButton.style.cursor = 'pointer';
+            copyButton.style.backgroundColor ='rgba(50, 55, 60, 0.65)';
+            copyButton.style.color = '#fff';
+            copyButton.style.border = 'none';
+            copyButton.style.borderRadius = '4px';
+            
+            // Afegir funcionalitat al botó de copiar
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(part).then(() => {
+                    copyButton.textContent = 'Copiat!';
+                    setTimeout(() => {
+                        copyButton.textContent = 'Copiar';
+                    }, 2000);
+                });
+            });
+            
+            // Contenidor per al pre i el botó de copiar
+            const codeContainer = document.createElement('div');
+            codeContainer.style.position = 'relative';
+            codeContainer.appendChild(copyButton);
+            codeContainer.appendChild(codePart);
+            
+            responseDiv.appendChild(codeContainer);
+        }
+    });
+    return responseDiv;
+}
+
 const messageComponent = (message, mode) => {
     const messageElement = document.createElement('div');
     messageElement.textContent = message;
     messageElement.style.fontSize = '15px';
-    messageElement.style.padding = '6px 10px';
     messageElement.style.lineHeight = '1.5';
     messageElement.style.wordWrap = 'break-word';
     if (mode === 'send'){
+        messageElement.style.padding = '6px 10px';
         messageElement.style.alignSelf = 'flex-end';
         messageElement.style.backgroundColor = '#e6f2ff';
-        messageElement.style.borderRadius = '15px';
+        messageElement.style.borderRadius = '6px';
         messageElement.style.maxWidth = '80%';
     } else {
+        messageElement.style.minHeight = '20px';
+        messageElement.style.padding = '0px 6px';
         messageElement.textContent = message;
         messageElement.style.alignSelf = 'flex-start';
         messageElement.style.maxWidth = '100%';
+        if (mode === "err"){
+            messageElement.style.color = "#f9c32f";
+        }
     }
     return messageElement;
 }
 
+var previousResponseId;
+
 // Handle sending messages
-function manageSend() {
+async function manageSend() {
     const userMessage = chatInput.value.trim();
     if (userMessage) {
         // Create and display user message
         const userMessageElement = messageComponent(userMessage, 'send');
         chatBody.appendChild(userMessageElement);
+        scrollToBottom();
+
         
         // Clear input
         chatInput.value = '';
@@ -140,61 +221,89 @@ function manageSend() {
         // Show typing indicator
         const typingIndicator = messageComponent('', 'receive');
         chatBody.appendChild(typingIndicator);
+        scrollToBottom();
 
         (function changeChargingBalls () {
             if (charging) {
                 typingIndicator.textContent = chargingBalls[0];
                 chargingBalls.push(chargingBalls.shift());
+                scrollToBottom();
                 setTimeout(changeChargingBalls, 500);
             }
         })()
-        
+        //comentar
         // Wait for 3 seconds before removing typing indicator
         setTimeout(() => {
             charging = false;
             chatBody.removeChild(typingIndicator);
-            const botMessage = messageComponent('Thanks for your message! We appreciate your input and will get back to you shortly. If you have any further questions, feel free to ask!', 'receive');
-            chatBody.appendChild(botMessage);
-        }, 3000);
+            const mockResponse = `Thanks for your message! We appreciate your input and will get back to you shortly. Here's code:\n\`\`\`const responseDiv = document.createElement('div');
+            responseDiv.style.display = 'flex';
+            responseDiv.style.flexDirection = 'column';
+            responseDiv.style.gap = '4px';
+            parts.forEach((part, index) => {
+                if (index % 2 === 0) {
+                    // Regular message part
+                    const messagePart = messageComponent(part, 'receive');
+                    responseDiv.appendChild(messagePart);
+                } else {
+                    // Code part
+                    const codePart = document.createElement('pre');
+                    codePart.textContent = part;\`\`\`If you have any further questions, feel free to ask!\n\`\`\`const responseDiv = document.createElement('div');
+                    responseDiv.style.display = 'flex';
+                    responseDiv.style.flexDirection = 'column';
+                    responseDiv.style.gap = '4px';
+                    parts.forEach((part, index) => {
+                        if (index % 2 === 0) {
+                            // Regular message part
+                            const messagePart = messageComponent(part, 'receive');
+                            responseDiv.appendChild(messagePart);
+                        } else {
+                            // Code part
+                            const codePart = document.createElement('pre');
+                            codePart.textContent = part;\`\`\`aaaaaaaaaaaaa`;
 
+            const responseDiv = getResponseDiv(mockResponse);
+            chatBody.appendChild(responseDiv);
+            scrollToElement(responseDiv,110);
+        }, 0); //@TODO
+        //fins aquí
 
-
-        
-        // // Example API call - replace with your actual endpoint
-        // fetch('http://localhost:8888/agent/response', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({ message: userMessage })
-        // })
-        // .then(response => response.json())
-        // .then(data => {
-        //     // Create and display bot response
-        //     const botMessage = document.createElement('div');
-        //     botMessage.textContent = data.response || "Thanks for your message!";
-        //     botMessage.style.alignSelf = 'flex-start';
-        //     botMessage.style.backgroundColor = '#f1f1f1';
-        //     botMessage.style.padding = '8px 12px';
-        //     botMessage.style.borderRadius = '15px';
-        //     botMessage.style.marginBottom = '8px';
-        //     botMessage.style.maxWidth = '80%';
+        //descomentar        
+        // Example API call - replace with your actual endpoint
+        // try{
+        //     const response = await fetch(APIurl + responseEndpoint, {
+        //         method: 'GET',
+        //         headers: { 'Content-Type': 'application/json'},
+        //         body: JSON.stringify({ 
+        //             input: userMessage,
+        //             vectorStoreId,
+        //             previous_response_id: previousResponseId,
+        //         })
+        //     });
+        //     const data = response.json();
+        //     charging = false;
+        //     chatBody.removeChild(typingIndicator);
+        //     previousResponseId = data.response_id;
+        //     const botMessage = messageComponent(data.output_text, "recieved");             
         //     chatBody.appendChild(botMessage);
-        // })
-        // .catch(error => {
+
+        // } catch (error) {
         //     console.error('Error:', error);
+        //     charging = false;
+        //     chatBody.removeChild(typingIndicator);
         //     // Show error message
-        //     const errorMessage = document.createElement('div');
-        //     errorMessage.textContent = "Sorry, couldn't process your request.";
-        //     errorMessage.style.alignSelf = 'flex-start';
-        //     errorMessage.style.color = 'red';
-        //     errorMessage.style.padding = '8px 12px';
-        //     errorMessage.style.marginBottom = '8px';
+        //     const errorMessage = messageComponent('En aquests moments no estic disponible', 'err')
         //     chatBody.appendChild(errorMessage);
-        // });
+        // } 
+        //fins aquí
     }
 }
 
+chatInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        manageSend();
+    }
+});
 
 chatSendButton.addEventListener('click', () => {
     manageSend();
