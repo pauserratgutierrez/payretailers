@@ -21,10 +21,11 @@ export class AgentController {
 
       const response = await this.agentModel.getResponse({ input, vectorStoreId, previous_response_id })
 
-      const usage = { 'gpt-4o-mini': { promptTokenCost: 0.15/1000000, completionTokenCost: 0.6/1000000 } }
-      const promptTokenCost = response.usage.input_tokens * usage['gpt-4o-mini'].promptTokenCost
-      const completionTokenCost = response.usage.output_tokens * usage['gpt-4o-mini'].completionTokenCost
-      console.log(`Generated a response. Cost: ${promptTokenCost + completionTokenCost}$`)
+      const usage = { 'gpt-4o-mini': { promptTokenCost: 0.15 / 1000000, completionTokenCost: 0.6 / 1000000 } }
+      const inputTokensCost = response.usage.input_tokens * usage['gpt-4o-mini'].promptTokenCost
+      const outputTokensCost = response.usage.output_tokens * usage['gpt-4o-mini'].completionTokenCost
+      const totalCost = inputTokensCost + outputTokensCost
+      console.log(`Response generated with ID: ${response.id}. Total cost: $${totalCost.toFixed(4)}`)
 
       res.json({ response_id: response.id, output_text: response.output_text })
     } catch (error) {

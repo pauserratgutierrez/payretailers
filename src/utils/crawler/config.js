@@ -39,8 +39,6 @@ export const config = {
       '[role="search"]',
 
       'div.swiper-slide-duplicate',
-      'div.uoc-form',
-      'div.uocfooter',
       'div#onetrust-consent-sdk',
       'span.visually-hidden',
       'span.icon-alt'
@@ -48,7 +46,7 @@ export const config = {
     DYNAMIC_CRAWLING: false,
     RETRY_STATUS_CODES: [408, 500, 502, 503, 504],
     REQUEST_TIMEOUT: 10000,
-    MAX_REDIRECTS: 5,
+    MAX_REDIRECTS: 50,
     MAX_CONTENT_LENGTH: 20 * 1024 * 1024, // 20MB
     MAX_RETRIES: 1,
     CRAWL_DELAY_MS: 200,

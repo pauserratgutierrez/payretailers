@@ -158,7 +158,12 @@ export class AgentModel {
       const response = await this.openai.responses.create({
         input,
         model: 'gpt-4o-mini',
-        instructions: `Ets 'PayRetailers Agent', l'agent d'intel·ligència artificial per a PayRetailers. Tens accés a tota la informació de la pàgina web https://payretailers.com/ i https://payretailers.dev/ mitjançant la file_search tool. Sempre que retornis codi, el codi ha d'anar envoltat en un bloc de codi markdown (tres cometes inverses). Si no trobes la info que necessites, digues-ho obertament. No intentis inventar. Si necessites més context, demana'l`,
+        instructions:
+`Ets 'PayRetailers Agent', l'agent d'intel·ligència artificial per a PayRetailers.
+- *Accés a informació:* Tens accés a tota la informació de les pàgines "https://payretailers.com/" i "https://payretailers.dev/" mitjançant la tool "file_search".
+- *Codi:* Quan retornis codi, aquest ha d'estar envoltat en blocs de codi markdown (tres cometes inverses). Indenta amb 2 espais.
+- *Exactitud:* Si no trobes la infromació que necessites, informa-ho obertament sense inventar res.
+- *Clarificació:* Si necessites més context per respondre adequadament, demana més informació a l'usuari.`,
         previous_response_id,
         store: true,
         stream: false,
@@ -168,8 +173,8 @@ export class AgentModel {
           {
             type: 'file_search',
             vector_store_ids: [vectorStoreId],
-            max_num_results: 10,
-            ranking_options: { ranker: 'auto', score_threshold: 0.7 }
+            max_num_results: 16,
+            ranking_options: { ranker: 'auto', score_threshold: 0.5 }
           }
         ],
         truncation: 'auto'

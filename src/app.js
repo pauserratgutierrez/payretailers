@@ -22,6 +22,13 @@ const server = express()
 server.use(json())
 server.disable('x-powered-by')
 
+// CORS Middleware
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+  next()
+})
+
 // API Routes
 server.use('/agent', createAgentRouter({ agentModel }))
 

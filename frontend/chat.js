@@ -8,12 +8,26 @@ const APIurl = 'http://localhost:8888/agent';
 const dataSetEndpoint = '/dataset/setup';
 const responseEndpoint = '/response';
 
-const {vectorStoreId} = fetch(APIurl + dataSetEndpoint, {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json'
+let vectorStoreId;
+
+// Initialize the chat by fetching the dataset setup
+async function getDataset() {
+    try {
+        const response = await fetch(APIurl + dataSetEndpoint, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await response.json();
+        vectorStoreId = data.vectorStoreId;
+        console.log("Chat initialized with vectorStoreId:", vectorStoreId);
+    } catch (error) {
+        console.error('Error initializing chat:', error);
     }
-})
+}
+
+getDataset();
 
 // Afegir classes i estil al botó
 floatingButton.classList.add('floating-button');
@@ -269,9 +283,9 @@ async function manageSend() {
         //fins aquí
 
         //descomentar        
-        try{
+        try {
             const response = await fetch(APIurl + responseEndpoint, {
-                method: 'GET',
+                method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({ 
                     input: userMessage,
@@ -279,22 +293,32 @@ async function manageSend() {
                     previous_response_id: previousResponseId,
                 })
             });
-            const data = response.json();
+            const data = await response.json();
             charging = false;
-            chatBody.removeChild(typingIndicator);
+
+            if (typingIndicator.parentNode === chatBody) {
+                chatBody.removeChild(typingIndicator);
+            }
+
+            if (data.error) throw new Error(data.error)
+            
             previousResponseId = data.response_id;
             const responseDiv = getResponseDiv(data.output_text);
             chatBody.appendChild(responseDiv);
-            scrollToElement(responseDiv,110);
+            scrollToElement(responseDiv, 110);
 
         } catch (error) {
             console.error('Error:', error);
             charging = false;
-            chatBody.removeChild(typingIndicator);
+
+            if (typingIndicator.parentNode === chatBody) {
+                chatBody.removeChild(typingIndicator);
+            }
+
             // Show error message
             const errorMessage = messageComponent('En aquests moments no estic disponible', 'err');
             chatBody.appendChild(errorMessage);
-            scrollToElement(responseDiv,110);
+            scrollToElement(errorMessage,110);
         } 
         //fins aquí
     }
