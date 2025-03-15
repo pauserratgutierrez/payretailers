@@ -15,10 +15,11 @@ export class AgentController {
 
   getResponse = async (req, res) => {
     try {
-      const { input } = req.body
+      const { input, vectorStoreId, previous_response_id } = req.body
+      if (!vectorStoreId) return res.status(400).json({ error: 'Missing vectorStore' })
       if (!input) return res.status(400).json({ error: 'Missing input' })
 
-      const response = await this.agentModel.getResponse({ input })
+      const response = await this.agentModel.getResponse({ input, vectorStoreId, previous_response_id })
       res.json({ data: { response } })
     } catch (error) {
       console.log(`Error in getResponse: ${error.message}`)

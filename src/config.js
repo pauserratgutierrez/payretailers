@@ -1,14 +1,9 @@
 export const CONFIG = {
-  AGENT_PARAMS: {
-    model: 'gpt-4o-mini',
-    instructions:
-`Ets 'UOC Agent', l'agent d'intel·ligència artificial per al servei d'atenció de la Universitat Oberta de Catalunya (UOC). La teva missió és respondre a les preguntes dels estudiants, professors o personal administratiu. Tens accés a file search.`,
-  },
   VECTOR_STORE_PARAMS: {
     chunking_strategy: { type: 'auto' },
     expires_after: { anchor: 'last_active_at', days: 4 },
-    metadata: { lookup_id: 'uoc_agent' }, // Always as first key-value pair!
-    name: 'UOC Agent',
+    metadata: { lookup_id: 'payretailers_agent' }, // Always as first key-value pair!
+    name: 'PayRetailers Agent',
   },
   DATASET_GITHUB: [
     {
