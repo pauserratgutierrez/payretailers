@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "src/app.js",
   "scripts": {
-    "start": "node --env-file.env ."
+    "start": "node --env-file=.env .",
+    "crawl": "node src/utils/crawler/client.js"
   },
   "type": "module",
   "repository": {
@@ -19,6 +20,8 @@
   "homepage": "https://github.com/pauserratgutierrez/payretailers#readme",
   "description": "",
   "dependencies": {
-    "openai": "^4.87.3"
+    "express": "^4.21.2",
+    "openai": "^4.87.3",
+    "scraply": "^1.0.22"
   }
 }

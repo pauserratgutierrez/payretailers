@@ -1,0 +1,2921 @@
+[
+  {
+    "url": "https://payretailers.dev/",
+    "file": "dataset/crawled/1.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": null,
+    "depth": 0
+  },
+  {
+    "url": "https://payretailers.com/",
+    "file": "dataset/crawled/2.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": null,
+    "depth": 0
+  },
+  {
+    "url": "https://payretailers.dev/docs",
+    "file": "dataset/crawled/3.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/reference",
+    "file": "dataset/crawled/4.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/changelog",
+    "file": "dataset/crawled/5.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/discuss",
+    "file": "dataset/crawled/6.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/welcome",
+    "file": "dataset/crawled/7.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/sports-betting-gambling-regulated-merchants-1",
+    "file": "dataset/crawled/8.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/pix-integration-payins-copy",
+    "file": "dataset/crawled/9.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/pix-integration-payouts-copy",
+    "file": "dataset/crawled/10.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/pix-integration-validations",
+    "file": "dataset/crawled/11.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/integration-types",
+    "file": "dataset/crawled/12.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/paywall-integration",
+    "file": "dataset/crawled/13.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/dynamic-integration",
+    "file": "dataset/crawled/14.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/hardcoded-integration",
+    "file": "dataset/crawled/15.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/host-to-host-integration",
+    "file": "dataset/crawled/16.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/host-to-host-integration-mexico-credit-cards",
+    "file": "dataset/crawled/17.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/merchant-portal-overview",
+    "file": "dataset/crawled/18.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/help-support",
+    "file": "dataset/crawled/19.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/password-reset",
+    "file": "dataset/crawled/20.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/balance-section",
+    "file": "dataset/crawled/21.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/transactions-section",
+    "file": "dataset/crawled/22.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/payouts-section",
+    "file": "dataset/crawled/23.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/payment-tools-section",
+    "file": "dataset/crawled/24.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/payment-links",
+    "file": "dataset/crawled/25.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/payment-emails",
+    "file": "dataset/crawled/26.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/landing-info-customization",
+    "file": "dataset/crawled/27.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/back-office-login-details",
+    "file": "dataset/crawled/28.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/transaction-payment-limits",
+    "file": "dataset/crawled/29.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/payout-payment-limits",
+    "file": "dataset/crawled/30.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/edit/welcome",
+    "file": "dataset/crawled/31.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.dev/docs/back-office-overview",
+    "file": "dataset/crawled/32.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.dev/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es",
+    "file": "dataset/crawled/33.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/productos",
+    "file": "dataset/crawled/34.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/metodos-de-pago",
+    "file": "dataset/crawled/35.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/industrias",
+    "file": "dataset/crawled/36.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados",
+    "file": "dataset/crawled/37.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/argentina",
+    "file": "dataset/crawled/38.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/brasil",
+    "file": "dataset/crawled/39.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/chile",
+    "file": "dataset/crawled/40.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/colombia",
+    "file": "dataset/crawled/41.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/costa-rica",
+    "file": "dataset/crawled/42.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/ecuador",
+    "file": "dataset/crawled/43.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/guatemala",
+    "file": "dataset/crawled/44.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/mexico",
+    "file": "dataset/crawled/45.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/panama",
+    "file": "dataset/crawled/46.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/peru",
+    "file": "dataset/crawled/47.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/descubre-africa",
+    "file": "dataset/crawled/48.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/markets/ruanda",
+    "file": "dataset/crawled/49.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/tanzania",
+    "file": "dataset/crawled/50.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/uganda",
+    "file": "dataset/crawled/51.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/markets/zambia",
+    "file": "dataset/crawled/52.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/partners",
+    "file": "dataset/crawled/53.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/sobre-nosotros",
+    "file": "dataset/crawled/54.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/empresa/trabaja-con-nosotros",
+    "file": "dataset/crawled/55.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/prensa",
+    "file": "dataset/crawled/56.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/blog",
+    "file": "dataset/crawled/57.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/events",
+    "file": "dataset/crawled/58.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/integraciones",
+    "file": "dataset/crawled/59.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/nuestra-api",
+    "file": "dataset/crawled/60.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/ayuda",
+    "file": "dataset/crawled/61.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/registro_web",
+    "file": "dataset/crawled/62.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/linea-etica",
+    "file": "dataset/crawled/63.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers_pix",
+    "file": "dataset/crawled/64.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/terminos-y-condiciones",
+    "file": "dataset/crawled/65.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/politicas-de-privacidad",
+    "file": "dataset/crawled/66.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/politicas-de-cookies",
+    "file": "dataset/crawled/67.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/",
+    "depth": 1
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/burkina-faso",
+    "file": "dataset/crawled/68.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/camerun",
+    "file": "dataset/crawled/69.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/costa-de-marfil",
+    "file": "dataset/crawled/70.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/ghana",
+    "file": "dataset/crawled/71.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/kenia",
+    "file": "dataset/crawled/72.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/nigeria",
+    "file": "dataset/crawled/73.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/senegal",
+    "file": "dataset/crawled/74.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/sudafrica",
+    "file": "dataset/crawled/75.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metodos-de-pago",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2022/07/12/acepta-pagos-pix-y-escala-tu-negocio-en-brasil-con-payretailers",
+    "file": "dataset/crawled/76.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/industrias",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2022/06/20/payretailers-woocommerce-plugin-una-integracion-facil-y-rapida-para-operar-en-latam",
+    "file": "dataset/crawled/77.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/industrias",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2022/06/13/pay-by-link-agiliza-tu-proceso-de-venta-en-america-latina",
+    "file": "dataset/crawled/78.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/industrias",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/latam/transacciones-financieras",
+    "file": "dataset/crawled/79.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/mercados",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2022/07/26/payretailers-el-mejor-proveedor-de-pagos-para-escalar-tu-negocio-a-nivel-global",
+    "file": "dataset/crawled/80.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/mercados",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2022/05/23/peru-encabeza-la-lista-de-crecimiento-y-desarrollo-de-e-commerce-en-latam",
+    "file": "dataset/crawled/81.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/mercados",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/pasarela-pago-para-mi-web",
+    "file": "dataset/crawled/82.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/descubre-africa",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/latam/automatizar-negocio",
+    "file": "dataset/crawled/83.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/descubre-africa",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/latam/que-es-un-hosting",
+    "file": "dataset/crawled/84.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/descubre-africa",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/politicas-de-empleo",
+    "file": "dataset/crawled/85.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/empresa/trabaja-con-nosotros",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/tendencias-de-pago-clave-en-2024",
+    "file": "dataset/crawled/86.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/por-que-los-pagos-digitales-son-el-futuro-sostenible-para-tu-negocio",
+    "file": "dataset/crawled/87.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2023/11/14/elevando-la-satisfaccion-del-usuario-el-valor-estrategico-de-payretailers-para-tu-base-de-clientes",
+    "file": "dataset/crawled/88.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2023/11/06/payretailers-asistira-a-sigma-europe-2023-con-su-solucion-de-pagos-innovadora-para-la-industria-del-igaming",
+    "file": "dataset/crawled/89.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2023/10/30/spei-simplificando-tus-pagos-en-mexico-con-transacciones-instantaneas",
+    "file": "dataset/crawled/90.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2023/09/21/cuales-son-las-piezas-clave-para-el-crecimiento-de-tu-negocio-en-costa-rica",
+    "file": "dataset/crawled/91.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/como-elegir-mejor-pasarela-pagos",
+    "file": "dataset/crawled/92.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/procesador-pagos-mexico-impulsa-negocio-apuestas",
+    "file": "dataset/crawled/93.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/procesamiento-pagos-electronicos-impulsa-negocio",
+    "file": "dataset/crawled/94.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/plataforma-pagos-ideal-latam",
+    "file": "dataset/crawled/95.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/articulos",
+    "file": "dataset/crawled/96.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/blog",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/abrir-tiquets",
+    "file": "dataset/crawled/97.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/ayuda",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/metricas-de-marketing-mas-importantes",
+    "file": "dataset/crawled/98.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/payretailers_pix",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/2023/07/16/como-estan-moldeando-los-pagos-en-linea-el-futuro-del-mercado-ecuatoriano",
+    "file": "dataset/crawled/99.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/payretailers_pix",
+    "depth": 2
+  },
+  {
+    "url": "https://payretailers.com/es/latam/comercio-digital",
+    "file": "dataset/crawled/100.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/transacciones-financieras",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/logistica-ecommerce",
+    "file": "dataset/crawled/101.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/transacciones-financieras",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/inteligencia-artificial-ecommerce",
+    "file": "dataset/crawled/102.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/transacciones-financieras",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarelas-de-pago-en-internet-en-latinoamerica",
+    "file": "dataset/crawled/103.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/transacciones-financieras",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/uso-seguro-pasarela-de-pago",
+    "file": "dataset/crawled/104.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pasarela-pago-para-mi-web",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/implementar-pasarela-pago-web",
+    "file": "dataset/crawled/105.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pasarela-pago-para-mi-web",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pasarela-de-pago",
+    "file": "dataset/crawled/106.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pasarela-pago-para-mi-web",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarela-de-pago-web",
+    "file": "dataset/crawled/107.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pasarela-pago-para-mi-web",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pci-dss",
+    "file": "dataset/crawled/108.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pasarela-pago-para-mi-web",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/lista-con-los-mejores-15-cms-que-puedes-utilizar-para-tu-sitio-web-corporativo-o-ecommerce",
+    "file": "dataset/crawled/109.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/automatizar-negocio",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/los-12-mejores-crm-para-gestion-de-datos-y-ventas-en-tu-sitio-web",
+    "file": "dataset/crawled/110.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/automatizar-negocio",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/marketing-inteligente",
+    "file": "dataset/crawled/111.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/automatizar-negocio",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/comercio-inteligente",
+    "file": "dataset/crawled/112.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/automatizar-negocio",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/mejores-tiendas-virtuales",
+    "file": "dataset/crawled/113.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/que-es-un-hosting",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/consumidor-online",
+    "file": "dataset/crawled/114.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/que-es-un-hosting",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pagos-alternativos",
+    "file": "dataset/crawled/115.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/tendencias-de-pago-clave-en-2024",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/customer-experience",
+    "file": "dataset/crawled/116.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/tendencias-de-pago-clave-en-2024",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/spei-simplificando-tus-pagos-en-mexico-con-transacciones-instantaneas",
+    "file": "dataset/crawled/117.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/tendencias-de-pago-clave-en-2024",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/elevando-la-satisfaccion-del-usuario-el-valor-estrategico-de-payretailers-para-tu-base-de-clientes",
+    "file": "dataset/crawled/118.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/por-que-los-pagos-digitales-son-el-futuro-sostenible-para-tu-negocio",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/experiencia-usuario",
+    "file": "dataset/crawled/119.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/11/14/elevando-la-satisfaccion-del-usuario-el-valor-estrategico-de-payretailers-para-tu-base-de-clientes",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-asistira-a-sigma-europe-2023-con-su-solucion-de-pagos-innovadora-para-la-industria-del-igaming",
+    "file": "dataset/crawled/120.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/11/14/elevando-la-satisfaccion-del-usuario-el-valor-estrategico-de-payretailers-para-tu-base-de-clientes",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/como-estan-moldeando-los-pagos-en-linea-el-futuro-del-mercado-ecuatoriano",
+    "file": "dataset/crawled/121.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/10/30/spei-simplificando-tus-pagos-en-mexico-con-transacciones-instantaneas",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/conversion-de-ventas",
+    "file": "dataset/crawled/122.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/09/21/cuales-son-las-piezas-clave-para-el-crecimiento-de-tu-negocio-en-costa-rica",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/aumenta-el-alcance-de-tu-comercio-en-el-salvador-ofreciendo-la-mejor-solucion-de-pagos",
+    "file": "dataset/crawled/123.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/09/21/cuales-son-las-piezas-clave-para-el-crecimiento-de-tu-negocio-en-costa-rica",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/seguridad-mejorada-certificacion-pci",
+    "file": "dataset/crawled/124.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/como-elegir-mejor-pasarela-pagos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/procesador-pagos-internacionales-latam-africa",
+    "file": "dataset/crawled/125.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/como-elegir-mejor-pasarela-pagos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pagos-digitales-latam-expande-negocio",
+    "file": "dataset/crawled/126.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/procesador-pagos-mexico-impulsa-negocio-apuestas",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/explora-potencial-pasarelas-pago-negocio",
+    "file": "dataset/crawled/127.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/procesamiento-pagos-electronicos-impulsa-negocio",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/plataforma-pagos-consejos-mercados-especializados",
+    "file": "dataset/crawled/128.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/plataforma-pagos-ideal-latam",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/soluciones-pago-integradas-forex-apuestas",
+    "file": "dataset/crawled/129.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pasarelas-pago-latinoamerica-expande-negocio",
+    "file": "dataset/crawled/130.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/procesadores-pago-latinoamerica-expande-negocio",
+    "file": "dataset/crawled/131.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pasarelas-pago-latinoamerica-transacciones-seguras",
+    "file": "dataset/crawled/132.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/como-elegir-plataformas-pago-online-negocio",
+    "file": "dataset/crawled/133.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/sistema-procesamiento-transacciones-impulsa-negocio",
+    "file": "dataset/crawled/134.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/procesadores-pago-argentina-clave-crecer",
+    "file": "dataset/crawled/135.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/optimiza-operaciones-sistema-tps-apuestas-juegos",
+    "file": "dataset/crawled/136.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pagos-digitales-latam-expansion-negocios",
+    "file": "dataset/crawled/137.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pasarela-pago-avanzada-negocios-colombia",
+    "file": "dataset/crawled/138.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/soluciones-pago-fx-mercados-emergentes",
+    "file": "dataset/crawled/139.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/gateway-pagos-argentina-entrada-mercados-regulados",
+    "file": "dataset/crawled/140.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/contratar-pasarela-pago-online-gaming",
+    "file": "dataset/crawled/141.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/optimiza-gestion-transacciones-juegos-apuestas",
+    "file": "dataset/crawled/142.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/medios-pago-internacionales-gaming-apuestas",
+    "file": "dataset/crawled/143.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/medios-cobro-internacional-negocio-latam-africa",
+    "file": "dataset/crawled/144.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/plataforma-pagos-online-gaming-latam-africa",
+    "file": "dataset/crawled/145.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/forex-latam-africa-procesamiento-transacciones",
+    "file": "dataset/crawled/146.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/api-pagos-expansion-global-online-gaming-fx-brokers",
+    "file": "dataset/crawled/147.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pasarelas-pago-internacionales-expansion-latam-africa",
+    "file": "dataset/crawled/148.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/pasarelas-pago-clave-expandir-negocio-latam",
+    "file": "dataset/crawled/149.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/suplantacion-identidad",
+    "file": "dataset/crawled/150.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/cvv-tarjeta-credito",
+    "file": "dataset/crawled/151.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/campana-ecommerce",
+    "file": "dataset/crawled/152.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/paginas-confiables-para-comprar-en-linea",
+    "file": "dataset/crawled/153.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/base-datos-ventas",
+    "file": "dataset/crawled/154.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/categorias-producto",
+    "file": "dataset/crawled/155.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/10/21/inteligencia-artificial",
+    "file": "dataset/crawled/156.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/10/12/blockchain-que-es",
+    "file": "dataset/crawled/157.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/10/02/pci-dss",
+    "file": "dataset/crawled/158.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/optimizacion-de-precios",
+    "file": "dataset/crawled/159.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/autenticacion-biometrica",
+    "file": "dataset/crawled/160.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/monederos-electronicos",
+    "file": "dataset/crawled/161.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/proceso-de-compra-como-definirlo",
+    "file": "dataset/crawled/162.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/kpis-mas-importantes-ventas-digitales",
+    "file": "dataset/crawled/163.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/09/05/payretailers-desembarca-en-bulgaria-expandiendo-operaciones-y-estableciendo-un-centro-de-desarrollo-en-sofia",
+    "file": "dataset/crawled/164.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/09/04/payretailers-en-ifx-expo-2023-impulsando-negocios-en-latam",
+    "file": "dataset/crawled/165.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/08/31/payretailers-jugador-lider-en-el-sector-de-pagos-en-latam-le-da-la-bienvenida-al-sbc-summit-2023-en-barcelona",
+    "file": "dataset/crawled/166.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/08/17/aumenta-el-alcance-de-tu-comercio-en-el-salvador-ofreciendo-la-mejor-solucion-de-pagos",
+    "file": "dataset/crawled/167.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/cumplimiento-pci",
+    "file": "dataset/crawled/168.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/experiencia-de-usuario",
+    "file": "dataset/crawled/169.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/07/12/payretailers-se-une-a-la-fundacion-la-caixa-para-colaborar-en-la-alianza-para-la-vacunacion-infantil",
+    "file": "dataset/crawled/170.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/07/07/los-12-mejores-crm-para-gestion-de-datos-y-ventas-en-tu-sitio-web",
+    "file": "dataset/crawled/171.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/07/06/lista-con-los-mejores-15-cms-que-puedes-utilizar-para-tu-sitio-web-corporativo-o-ecommerce",
+    "file": "dataset/crawled/172.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/las-17-mejores-ideas-de-negocios-para-emprender-y-crear-un-negocio-con-poco-dinero",
+    "file": "dataset/crawled/173.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/06/28/27-ideas-de-negocios-rentables-para-crear-empresa-en-2023-ideas-de-negocios-digitales-y-no-digitales",
+    "file": "dataset/crawled/174.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/06/27/como-emprender-un-negocio-en-2023-guia-paso-a-paso-con-consejos-ideas-y-recomendaciones-para-crear-tu-empresa",
+    "file": "dataset/crawled/175.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/top-10-productos-digitales-para-vender-y-estrategias-para-comercializarlos",
+    "file": "dataset/crawled/176.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/06/22/conoce-aqui-los-11-tipos-de-negocios-con-mayor-rentabilidad-o-mas-lucrativos",
+    "file": "dataset/crawled/177.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/06/21/lo-que-necesitas-saber-acerca-de-las-tendencias-que-estan-revolucionando-la-industria-de-pagos",
+    "file": "dataset/crawled/178.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/06/16/guia-completa-para-aprender-a-vender-por-internet-con-estrategias-comprobadas",
+    "file": "dataset/crawled/179.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/ofertas-personalizadas",
+    "file": "dataset/crawled/180.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-se-une-a-sigma-americas-para-impulsar-la-innovacion-en-la-industria-del-juego-en-brasil",
+    "file": "dataset/crawled/181.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/que-es-social-selling",
+    "file": "dataset/crawled/182.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/05/30/impulsando-el-crecimiento-turistico-en-guatemala-a-traves-de-la-digitalizacion-descubre-las-oportunidades-clave",
+    "file": "dataset/crawled/183.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/05/26/payretailers-en-money-20-20-europa-expandiendo-oportunidades-comerciales-en-latam-con-su-plataforma-integral-de-pagos",
+    "file": "dataset/crawled/184.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/comercio-movil",
+    "file": "dataset/crawled/185.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/experiencia-de-compra",
+    "file": "dataset/crawled/186.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/omnicanalidad",
+    "file": "dataset/crawled/187.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/explorando-el-mercado-de-pagos-en-panama-junto-a-payretailers",
+    "file": "dataset/crawled/188.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/exploring-the-payments-market-in-panama-with-payretailers",
+    "file": "dataset/crawled/189.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/comercio-electronico-b2c",
+    "file": "dataset/crawled/190.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/envios-ecommerce",
+    "file": "dataset/crawled/191.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/crowdfunding-crowdsourcing",
+    "file": "dataset/crawled/192.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/herramientas-comercio-electronico",
+    "file": "dataset/crawled/193.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/denunciar-fraudes-internet",
+    "file": "dataset/crawled/194.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/02/21/payretailers-llega-al-white-label-world-expo-2023-continuando-su-tour-corporativo-en-londres-2",
+    "file": "dataset/crawled/195.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/02/20/payretailers-llega-al-white-label-world-expo-2023-continuando-su-tour-corporativo-en-londres",
+    "file": "dataset/crawled/196.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/ecommerce-en-latinoamerica",
+    "file": "dataset/crawled/197.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/02/09/payretailers-asigna-a-lorenzo-pellegrino-como-el-nuevo-director-de-operaciones-y-asuntos-digitales",
+    "file": "dataset/crawled/198.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/devoluciones-en-compras",
+    "file": "dataset/crawled/199.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/01/24/unase-a-payretailers-en-el-mayor-evento-mundial-dedicado-al-juego-ice-london-2023",
+    "file": "dataset/crawled/200.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/transacciones-online",
+    "file": "dataset/crawled/201.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/01/09/grupo-payretailers-chile-encabeza-la-ruta-de-rsc-por-la-inclusion-social-y-financiera-en-latam-2023",
+    "file": "dataset/crawled/202.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2023/01/09/un-techo-para-chile-1ra-accion-de-responsabilidad-social-corporativa-grupo-payretailers-2023",
+    "file": "dataset/crawled/203.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/tendencias-en-ecommerce",
+    "file": "dataset/crawled/204.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/12/09/impulsa-tus-pagos-con-billeteras-electronicas-en-toda-latinoamerica",
+    "file": "dataset/crawled/205.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/tipos-de-fraudes-ciberneticos",
+    "file": "dataset/crawled/206.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/11/24/potencia-tus-ventas-minoristas-en-latam-con-la-estrategia-de-pagos-localizada-de-payretailers",
+    "file": "dataset/crawled/207.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/facturacion-electronica",
+    "file": "dataset/crawled/208.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/11/07/destacando-la-solucion-de-pago-de-payretailers-en-sigma-para-los-jugadores-de-latam",
+    "file": "dataset/crawled/209.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/fraude-cibernetico",
+    "file": "dataset/crawled/210.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/11/02/el-grupo-payretailers-contribuye-al-fortalecimiento-de-las-redes-de-apoyo-economicas-y-sociales-de-las-mujeres-de-chilon-en-mexico",
+    "file": "dataset/crawled/211.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/11/02/mexico-grupo-payretailers-y-manos-unidas-presentan-su-ultima-causa-de-responsabilidad-social-del-2022-en-latam",
+    "file": "dataset/crawled/212.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/10/31/acelera-la-escalabilidad-de-tu-negocio-de-e-learning-en-america-latina",
+    "file": "dataset/crawled/213.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/rsc-espana-asi-fue-la-contribucion-de-payretailers-con-la-fundacion-aspasim-en-barcelona",
+    "file": "dataset/crawled/214.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/ecommerce-chile",
+    "file": "dataset/crawled/215.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/10/21/payretailers-en-el-sbc-summit-latam-una-oportunidad-para-impulsar-la-digitalizacion-y-la-sostenibilidad-en-el-mercado-de-juegos-online",
+    "file": "dataset/crawled/216.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/economia-digital",
+    "file": "dataset/crawled/217.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/10/05/payretailers-asiste-al-money-20-20-usa-abriendo-oportunidades-digitales-en-los-mercados-latinoamericanos",
+    "file": "dataset/crawled/218.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/10/04/conmebol-sudamericana-2022-por-payretailers-independiente-del-valle-gana-el-campeonato-y-se-corona-campeon-de-sudamerica",
+    "file": "dataset/crawled/219.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/normativa-psd2",
+    "file": "dataset/crawled/220.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/10/03/responsabilidad-social-payretailers-se-une-a-la-fundacion-aspasim-por-las-personas-con-discapacidad-intelectual-en-barcelona",
+    "file": "dataset/crawled/221.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/10/02/payretailers-se-compromete-con-la-fundacion-aspasim-en-espana-y-financia-el-100-de-un-nuevo-proyecto-social",
+    "file": "dataset/crawled/222.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/09/28/la-final-de-la-conmebol-sudamericana-2022-un-patrocinio-oficial-de-payretailers",
+    "file": "dataset/crawled/223.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/09/23/payretailers-y-xbo-com-se-asocian-para-expandir-sus-operaciones-en-latam",
+    "file": "dataset/crawled/224.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/09/14/payretailers-en-white-label-world-expo-2022-una-oportunidad-de-expansion-para-e-commerce-globales-en-latam",
+    "file": "dataset/crawled/225.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/redes-sociales-ecommerce",
+    "file": "dataset/crawled/226.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/09/12/grupo-payretailers-adquiere-la-empresa-argentina-de-desarrollo-de-software-asamblo",
+    "file": "dataset/crawled/227.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-y-pagodigital-patrocinadores-oficiales-del-seonderground-colombia",
+    "file": "dataset/crawled/228.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/fintech-chile",
+    "file": "dataset/crawled/229.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/08/24/la-influencia-de-la-inteligencia-artificial-en-los-pagos-online-y-en-el-futbol-by-payretailers-patrocinador-oficial-de-la-conmebol-sudamericana",
+    "file": "dataset/crawled/230.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/carrito-compras-e-commerce",
+    "file": "dataset/crawled/231.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/08/22/payretailers-blinda-el-procesamiento-de-tus-pagos-con-un-sistema-anti-fraude-localizado",
+    "file": "dataset/crawled/232.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarelas-pago-mexico",
+    "file": "dataset/crawled/233.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/08/04/integra-el-metodo-mas-usado-en-mexico-con-pagos-en-oxxo",
+    "file": "dataset/crawled/234.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/vtex-ecommerce",
+    "file": "dataset/crawled/235.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/08/01/brazil-the-csr-strategy-of-the-grupo-payretailers-manos-unidas-continues-to-support-charitable-causes-in-latam",
+    "file": "dataset/crawled/236.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/08/01/responsabilidad-social-el-grupo-payretailers-por-la-seguridad-alimentaria-y-cultural-del-pueblo-chiquitano-en-brasil",
+    "file": "dataset/crawled/237.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/07/29/los-octavos-de-final-de-la-conmebol-sudamericana-y-payretailers-impacto-doble-para-los-mercados-emergentes-en-latinoamerica",
+    "file": "dataset/crawled/238.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/07/15/reporte-de-patrocinio-payretailers-patrocinador-oficial-de-la-superliga-americana-de-rugby-2022",
+    "file": "dataset/crawled/239.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/sistema-procesamiento-transacciones",
+    "file": "dataset/crawled/240.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/tpv-virtual",
+    "file": "dataset/crawled/241.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/07/04/payretailers-anuncia-su-colaboracion-con-la-fintech-week-london-2022",
+    "file": "dataset/crawled/242.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/tecnologia-financiera",
+    "file": "dataset/crawled/243.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/07/01/payretailers-patrocina-oficialmente-los-europe-fintech-awards-2022",
+    "file": "dataset/crawled/244.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/06/28/la-cultura-del-futbol-en-colombia-y-la-importancia-de-los-patrocinios-deportivos-en-el-grupo-payretailers",
+    "file": "dataset/crawled/245.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/solucion-pago",
+    "file": "dataset/crawled/246.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/billetera-virtual",
+    "file": "dataset/crawled/247.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/06/10/el-grupo-payretailers-contribuye-con-responsabilidad-social-en-latam",
+    "file": "dataset/crawled/248.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/el-grupo-payretailers-y-la-ong-manos-unidas-una-alianza-estrategica-de-responsabilidad-social",
+    "file": "dataset/crawled/249.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pagos-digitales",
+    "file": "dataset/crawled/250.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/05/31/slar-2022-by-payretailers-penarol-gana-la-superliga-americana-de-rugby",
+    "file": "dataset/crawled/251.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-desembarca-en-el-money-20/20-europa-2022",
+    "file": "dataset/crawled/252.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-is-heading-to-ifx-expo-international-2022-cyprus",
+    "file": "dataset/crawled/253.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarelas-pago-criptomonedas",
+    "file": "dataset/crawled/254.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/05/18/payretailers-conmebol-sudamericana-los-pagos-transfronterizos-y-el-futbol-un-duo-perfecto-para-expandir-negocios-en-latam",
+    "file": "dataset/crawled/255.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pagos-nfc-y-sin-contacto",
+    "file": "dataset/crawled/256.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/05/05/incrementa-la-conversion-de-pagos-y-acelera-el-crecimiento-de-tu-negocio",
+    "file": "dataset/crawled/257.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/05/03/payretailers-patrocinador-oficial-de-la-superliga-americana-de-rugby-inicio-su-temporada-2022",
+    "file": "dataset/crawled/258.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/procesamiento-tarjetas-credito",
+    "file": "dataset/crawled/259.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/04/29/payretailers-y-la-conmebol-sudamericana-siguen-impulsando-con-el-deporte-la-inclusion-financiera-en-latam",
+    "file": "dataset/crawled/260.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/que-es-la-seguridad-en-el-e-commerce",
+    "file": "dataset/crawled/261.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/como-escoger-pagos-internacionales",
+    "file": "dataset/crawled/262.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/lo-que-necesitas-para-hacer-una-transferencia-bancaria-por-internet_2",
+    "file": "dataset/crawled/263.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/ventas-en-linea",
+    "file": "dataset/crawled/264.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarelas-de-pago-para-woocommerce",
+    "file": "dataset/crawled/265.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/vender-en-redes",
+    "file": "dataset/crawled/266.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/app-para-pagar-con-el-movil",
+    "file": "dataset/crawled/267.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/comercio-electronico-b2b",
+    "file": "dataset/crawled/268.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/mejorar-ventas",
+    "file": "dataset/crawled/269.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/vender-en-google-shopping",
+    "file": "dataset/crawled/270.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/procesador-pagos",
+    "file": "dataset/crawled/271.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/optimizacion-de-una-tienda-online",
+    "file": "dataset/crawled/272.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/mejores-formas-de-pago-internacional-para-2021",
+    "file": "dataset/crawled/273.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/ecommerce-para-pymes",
+    "file": "dataset/crawled/274.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/el-retail-se-digitaliza-en-latinoamerica",
+    "file": "dataset/crawled/275.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/proveedores-servicios-pago",
+    "file": "dataset/crawled/276.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/02/11/in-profile-vanessa-martinez-nueva-chief-people-officer-cpo-de-payretailers",
+    "file": "dataset/crawled/277.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/formas-de-pago-en-android",
+    "file": "dataset/crawled/278.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/procesamiento-pagos",
+    "file": "dataset/crawled/279.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/aplicacion-para-pago-con-tarjeta",
+    "file": "dataset/crawled/280.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/02/03/america-latina-entre-los-mercados-mas-prometedores-del-mundo-en-innovacion-y-emprendimiento",
+    "file": "dataset/crawled/281.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/cms-ecommerce",
+    "file": "dataset/crawled/282.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/01/27/in-profile-el-nuevo-chief-operating-officer-coo-de-payretailers",
+    "file": "dataset/crawled/283.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2022/01/21/la-enorme-oportunidad-del-open-banking-para-merchants-en-latam",
+    "file": "dataset/crawled/284.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2021/12/23/payretailers-patrocinador-oficial-de-la-superliga-americana-de-rugby-2022",
+    "file": "dataset/crawled/285.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pagar-con-tarjeta-de-debito-por-internet",
+    "file": "dataset/crawled/286.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/optimizacion-de-ventas",
+    "file": "dataset/crawled/287.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/comercio-electronico-pandemia",
+    "file": "dataset/crawled/288.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/como-gestionar-una-empresa-pequena",
+    "file": "dataset/crawled/289.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/marketing-digital-para-pyme",
+    "file": "dataset/crawled/290.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2021/10/29/payretailers-reconocido-por-excelencia-en-inclusion-financiera-y-mejor-empresa-de-procesamiento-en-pagos-digitales-por-pan-finance",
+    "file": "dataset/crawled/291.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/como-optimizar-las-ventas",
+    "file": "dataset/crawled/292.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/tiendas-en-linea",
+    "file": "dataset/crawled/293.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/comprar-y-vender-por-internet",
+    "file": "dataset/crawled/294.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/ifx-expo-internacional",
+    "file": "dataset/crawled/295.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-asistira-a-money-20-20-europa",
+    "file": "dataset/crawled/296.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam-e-commerce",
+    "file": "dataset/crawled/297.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/aplicaciones-de-pagos",
+    "file": "dataset/crawled/298.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/cms-para-ecommerce",
+    "file": "dataset/crawled/299.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam-y-fintech",
+    "file": "dataset/crawled/300.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/plataforma-para-crear-tiendas-online",
+    "file": "dataset/crawled/301.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pagos-por-qr",
+    "file": "dataset/crawled/302.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/las-10-mejores-apps-de-pagos-en-linea-de-latinoamerica",
+    "file": "dataset/crawled/303.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/sistema-de-pago-web",
+    "file": "dataset/crawled/304.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarelas-de-pago-latinoamerica",
+    "file": "dataset/crawled/305.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/api-para-ecommerce",
+    "file": "dataset/crawled/306.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/formas-de-pago-latam-disponibles-en-2021",
+    "file": "dataset/crawled/307.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/mejores-formas-de-comprar-seguro-online",
+    "file": "dataset/crawled/308.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/como-pagar-seguro-en-internet",
+    "file": "dataset/crawled/309.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pago-seguro-en-internet",
+    "file": "dataset/crawled/310.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/metodos-de-pago-online",
+    "file": "dataset/crawled/311.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/2021/05/17/como-integrar-una-api-de-pago-para-transacciones-con-tarjetas-en-tu-sitio-web",
+    "file": "dataset/crawled/312.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/como-integrar-pago-con-tarjeta-en-web",
+    "file": "dataset/crawled/313.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/principales-kpis-ecommerce",
+    "file": "dataset/crawled/314.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/plataformas-e-commerce-tienda-virtual",
+    "file": "dataset/crawled/315.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/plataformas-de-pago-online",
+    "file": "dataset/crawled/316.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarela-pago-ecommerce",
+    "file": "dataset/crawled/317.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/cual-pasarela-de-pago-wordpress-elegir",
+    "file": "dataset/crawled/318.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/como-integrar-pagos-con-tarjeta-en-tu-sitio-web",
+    "file": "dataset/crawled/319.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/la-importancia-de-las-transferencias-en-linea",
+    "file": "dataset/crawled/320.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/api-pago",
+    "file": "dataset/crawled/321.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/recibir-pagos-online",
+    "file": "dataset/crawled/322.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/pasarela-pago-wordpress",
+    "file": "dataset/crawled/323.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/vender-online",
+    "file": "dataset/crawled/324.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/crear-un-ecommerce",
+    "file": "dataset/crawled/325.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/latam/vender-en-redes-sociales",
+    "file": "dataset/crawled/326.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/articulos",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/como-emprender-un-negocio-en-2023-guia-paso-a-paso-con-consejos-ideas-y-recomendaciones-para-crear-tu-empresa",
+    "file": "dataset/crawled/327.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metricas-de-marketing-mas-importantes",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/guia-completa-para-aprender-a-vender-por-internet-con-estrategias-comprobadas",
+    "file": "dataset/crawled/328.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metricas-de-marketing-mas-importantes",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/conoce-aqui-los-11-tipos-de-negocios-con-mayor-rentabilidad-o-mas-lucrativos",
+    "file": "dataset/crawled/329.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/metricas-de-marketing-mas-importantes",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-el-mejor-proveedor-de-pagos-para-escalar-tu-negocio-a-nivel-global",
+    "file": "dataset/crawled/330.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/07/16/como-estan-moldeando-los-pagos-en-linea-el-futuro-del-mercado-ecuatoriano",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/contacto_web",
+    "file": "dataset/crawled/331.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/07/16/como-estan-moldeando-los-pagos-en-linea-el-futuro-del-mercado-ecuatoriano",
+    "depth": 3
+  },
+  {
+    "url": "https://payretailers.com/es/america-latina-entre-los-mercados-mas-prometedores-del-mundo-en-innovacion-y-emprendimiento",
+    "file": "dataset/crawled/332.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/comercio-digital",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/incrementa-la-conversion-de-pagos-y-acelera-el-crecimiento-de-tu-negocio",
+    "file": "dataset/crawled/333.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/inteligencia-artificial-ecommerce",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/acelera-la-escalabilidad-de-tu-negocio-de-e-learning-en-america-latina",
+    "file": "dataset/crawled/334.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/inteligencia-artificial-ecommerce",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/impulsa-tus-pagos-con-billeteras-electronicas-en-toda-latinoamerica",
+    "file": "dataset/crawled/335.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/pasarelas-de-pago-en-internet-en-latinoamerica",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/lo-que-necesitas-saber-acerca-de-las-tendencias-que-estan-revolucionando-la-industria-de-pagos",
+    "file": "dataset/crawled/336.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pci-dss",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-blinda-el-procesamiento-de-tus-pagos-con-un-sistema-anti-fraude-localizado",
+    "file": "dataset/crawled/337.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pci-dss",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-woocommerce-plugin-una-integracion-facil-y-rapida-para-operar-en-latam",
+    "file": "dataset/crawled/338.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/lista-con-los-mejores-15-cms-que-puedes-utilizar-para-tu-sitio-web-corporativo-o-ecommerce",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/integra-el-metodo-mas-usado-en-mexico-con-pagos-en-oxxo",
+    "file": "dataset/crawled/339.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/pagos-alternativos",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/mercados/el-salvador",
+    "file": null,
+    "status": 404,
+    "error": "Request failed with status code 404",
+    "referrerUrl": "https://payretailers.com/es/aumenta-el-alcance-de-tu-comercio-en-el-salvador-ofreciendo-la-mejor-solucion-de-pagos",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-en-money-20-20-europa-expandiendo-oportunidades-comerciales-en-latam-con-su-plataforma-integral-de-pagos",
+    "file": "dataset/crawled/341.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/plataforma-pagos-consejos-mercados-especializados",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/la-influencia-de-la-inteligencia-artificial-en-los-pagos-online-y-en-el-futbol-by-payretailers-patrocinador-oficial-de-la-conmebol-sudamericana",
+    "file": "dataset/crawled/342.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/10/21/inteligencia-artificial",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/pay-by-link-agiliza-tu-proceso-de-venta-en-america-latina",
+    "file": "dataset/crawled/343.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/10/12/blockchain-que-es",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/27-ideas-de-negocios-rentables-para-crear-empresa-en-2023-ideas-de-negocios-digitales-y-no-digitales",
+    "file": "dataset/crawled/344.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/kpis-mas-importantes-ventas-digitales",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/como-integrar-una-api-de-pago-para-transacciones-con-tarjetas-en-tu-sitio-web",
+    "file": "dataset/crawled/345.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/las-17-mejores-ideas-de-negocios-para-emprender-y-crear-un-negocio-con-poco-dinero",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/que-es-la-seguridad-en-el-e-commerce",
+    "file": "dataset/crawled/346.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/transacciones-online",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/comunidad-wayuu",
+    "file": "dataset/crawled/347.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/01/09/grupo-payretailers-chile-encabeza-la-ruta-de-rsc-por-la-inclusion-social-y-financiera-en-latam-2023",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/pueblo_chiquitano",
+    "file": "dataset/crawled/348.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/01/09/grupo-payretailers-chile-encabeza-la-ruta-de-rsc-por-la-inclusion-social-y-financiera-en-latam-2023",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/mujeres-en-chilon",
+    "file": "dataset/crawled/349.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/01/09/grupo-payretailers-chile-encabeza-la-ruta-de-rsc-por-la-inclusion-social-y-financiera-en-latam-2023",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/fundacion-aspasim-espana",
+    "file": "dataset/crawled/350.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2023/01/09/grupo-payretailers-chile-encabeza-la-ruta-de-rsc-por-la-inclusion-social-y-financiera-en-latam-2023",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/payretailers-se-compromete-con-la-fundacion-aspasim-en-espana-y-financia-el-100-de-un-nuevo-proyecto-social",
+    "file": "dataset/crawled/351.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2022/11/02/mexico-grupo-payretailers-y-manos-unidas-presentan-su-ultima-causa-de-responsabilidad-social-del-2022-en-latam",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/acepta-pagos-pix-y-escala-tu-negocio-en-brasil-con-payretailers",
+    "file": "dataset/crawled/352.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/normativa-psd2",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/responsabilidad-social-corporativa",
+    "file": "dataset/crawled/353.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2022/10/03/responsabilidad-social-payretailers-se-une-a-la-fundacion-aspasim-por-las-personas-con-discapacidad-intelectual-en-barcelona",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/conmebol-sudamericana-2",
+    "file": "dataset/crawled/354.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/2022/08/24/la-influencia-de-la-inteligencia-artificial-en-los-pagos-online-y-en-el-futbol-by-payretailers-patrocinador-oficial-de-la-conmebol-sudamericana",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/el-grupo-payretailers-contribuye-con-responsabilidad-social-en-latam",
+    "file": "dataset/crawled/355.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/el-grupo-payretailers-y-la-ong-manos-unidas-una-alianza-estrategica-de-responsabilidad-social",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/potencia-tus-ventas-minoristas-en-latam-con-la-estrategia-de-pagos-localizada-de-payretailers",
+    "file": "dataset/crawled/356.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/procesador-pagos",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/plataformas-ecommerce-tienda-virtual",
+    "file": null,
+    "status": 404,
+    "error": "Request failed with status code 404",
+    "referrerUrl": "https://payretailers.com/es/latam/comprar-y-vender-por-internet",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/latam/las-10-mejores-apps-de-pagos-en-linea-de-latinoamerica",
+    "file": "dataset/crawled/358.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/sistema-de-pago-web",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.compasarela-pago-ecommerce/",
+    "file": null,
+    "error": "getaddrinfo ENOTFOUND payretailers.compasarela-pago-ecommerce",
+    "referrerUrl": "https://payretailers.com/es/latam/metodos-de-pago-online",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/latam/guia-completa-de-como-elegir-una-pasarela-de-pago-para-tu-ecommerce",
+    "file": null,
+    "status": 404,
+    "error": "Request failed with status code 404",
+    "referrerUrl": "https://payretailers.com/es/latam/la-importancia-de-las-transferencias-en-linea",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/es/latam/guia-completa-de-como-elegir-una-pasarela-de-pago-para-tu-ecommerce",
+    "file": null,
+    "status": 404,
+    "error": "Request failed with status code 404",
+    "referrerUrl": "https://payretailers.com/es/latam/la-importancia-de-las-transferencias-en-linea",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/latam/pasarela-pago-wordpress",
+    "file": "dataset/crawled/362.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/api-pago",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/latam/cual-pasarela-de-pago-wordpress-elegir",
+    "file": "dataset/crawled/363.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/api-pago",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/latam/la-importancia-de-las-transferencias-en-linea",
+    "file": "dataset/crawled/364.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/crear-un-ecommerce",
+    "depth": 4
+  },
+  {
+    "url": "https://payretailers.com/latam/como-integrar-pagos-con-tarjeta-en-tu-sitio-web",
+    "file": "dataset/crawled/365.json",
+    "status": 200,
+    "error": null,
+    "referrerUrl": "https://payretailers.com/es/latam/crear-un-ecommerce",
+    "depth": 4
+  }
+]
