@@ -233,68 +233,69 @@ async function manageSend() {
         })()
         //comentar
         // Wait for 3 seconds before removing typing indicator
-        setTimeout(() => {
-            charging = false;
-            chatBody.removeChild(typingIndicator);
-            const mockResponse = `Thanks for your message! We appreciate your input and will get back to you shortly. Here's code:\n\`\`\`const responseDiv = document.createElement('div');
-            responseDiv.style.display = 'flex';
-            responseDiv.style.flexDirection = 'column';
-            responseDiv.style.gap = '4px';
-            parts.forEach((part, index) => {
-                if (index % 2 === 0) {
-                    // Regular message part
-                    const messagePart = messageComponent(part, 'receive');
-                    responseDiv.appendChild(messagePart);
-                } else {
-                    // Code part
-                    const codePart = document.createElement('pre');
-                    codePart.textContent = part;\`\`\`If you have any further questions, feel free to ask!\n\`\`\`const responseDiv = document.createElement('div');
-                    responseDiv.style.display = 'flex';
-                    responseDiv.style.flexDirection = 'column';
-                    responseDiv.style.gap = '4px';
-                    parts.forEach((part, index) => {
-                        if (index % 2 === 0) {
-                            // Regular message part
-                            const messagePart = messageComponent(part, 'receive');
-                            responseDiv.appendChild(messagePart);
-                        } else {
-                            // Code part
-                            const codePart = document.createElement('pre');
-                            codePart.textContent = part;\`\`\`aaaaaaaaaaaaa`;
+        // setTimeout(() => {
+        //     charging = false;
+        //     chatBody.removeChild(typingIndicator);
+        //     const mockResponse = `Thanks for your message! We appreciate your input and will get back to you shortly. Here's code:\n\`\`\`const responseDiv = document.createElement('div');
+        //     responseDiv.style.display = 'flex';
+        //     responseDiv.style.flexDirection = 'column';
+        //     responseDiv.style.gap = '4px';
+        //     parts.forEach((part, index) => {
+        //         if (index % 2 === 0) {
+        //             // Regular message part
+        //             const messagePart = messageComponent(part, 'receive');
+        //             responseDiv.appendChild(messagePart);
+        //         } else {
+        //             // Code part
+        //             const codePart = document.createElement('pre');
+        //             codePart.textContent = part;\`\`\`If you have any further questions, feel free to ask!\n\`\`\`const responseDiv = document.createElement('div');
+        //             responseDiv.style.display = 'flex';
+        //             responseDiv.style.flexDirection = 'column';
+        //             responseDiv.style.gap = '4px';
+        //             parts.forEach((part, index) => {
+        //                 if (index % 2 === 0) {
+        //                     // Regular message part
+        //                     const messagePart = messageComponent(part, 'receive');
+        //                     responseDiv.appendChild(messagePart);
+        //                 } else {
+        //                     // Code part
+        //                     const codePart = document.createElement('pre');
+        //                     codePart.textContent = part;\`\`\`aaaaaaaaaaaaa`;
 
-            const responseDiv = getResponseDiv(mockResponse);
-            chatBody.appendChild(responseDiv);
-            scrollToElement(responseDiv,110);
-        }, 0); //@TODO
+        //     const responseDiv = getResponseDiv(mockResponse);
+        //     chatBody.appendChild(responseDiv);
+        //     scrollToElement(responseDiv,110);
+        // }, 0); 
         //fins aquí
 
         //descomentar        
-        // Example API call - replace with your actual endpoint
-        // try{
-        //     const response = await fetch(APIurl + responseEndpoint, {
-        //         method: 'GET',
-        //         headers: { 'Content-Type': 'application/json'},
-        //         body: JSON.stringify({ 
-        //             input: userMessage,
-        //             vectorStoreId,
-        //             previous_response_id: previousResponseId,
-        //         })
-        //     });
-        //     const data = response.json();
-        //     charging = false;
-        //     chatBody.removeChild(typingIndicator);
-        //     previousResponseId = data.response_id;
-        //     const botMessage = messageComponent(data.output_text, "recieved");             
-        //     chatBody.appendChild(botMessage);
+        try{
+            const response = await fetch(APIurl + responseEndpoint, {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify({ 
+                    input: userMessage,
+                    vectorStoreId,
+                    previous_response_id: previousResponseId,
+                })
+            });
+            const data = response.json();
+            charging = false;
+            chatBody.removeChild(typingIndicator);
+            previousResponseId = data.response_id;
+            const responseDiv = getResponseDiv(data.output_text);
+            chatBody.appendChild(responseDiv);
+            scrollToElement(responseDiv,110);
 
-        // } catch (error) {
-        //     console.error('Error:', error);
-        //     charging = false;
-        //     chatBody.removeChild(typingIndicator);
-        //     // Show error message
-        //     const errorMessage = messageComponent('En aquests moments no estic disponible', 'err')
-        //     chatBody.appendChild(errorMessage);
-        // } 
+        } catch (error) {
+            console.error('Error:', error);
+            charging = false;
+            chatBody.removeChild(typingIndicator);
+            // Show error message
+            const errorMessage = messageComponent('En aquests moments no estic disponible', 'err');
+            chatBody.appendChild(errorMessage);
+            scrollToElement(responseDiv,110);
+        } 
         //fins aquí
     }
 }
