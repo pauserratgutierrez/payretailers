@@ -44,3 +44,7 @@ AI Buy Agent In Action
 ![image](https://github.com/user-attachments/assets/faade160-607e-429b-87fb-b76b35c5932b)
 PayRetailers Generated Payment Link from AI Agent
 ![image](https://github.com/user-attachments/assets/ce2d0c79-c60a-43a0-8cc7-341cb75ef7d5)
+MVP Video of the Product in Action
+https://github.com/user-attachments/assets/d9a42cb6-8381-47eb-86a1-59fcef12831d
+
+
