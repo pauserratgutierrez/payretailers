@@ -14,7 +14,7 @@ This project is part of a challenge from PayRetailers to use AI in a fair usage 
 Our project implementation followed a two way solution.
 - First, we implemented a RAG AI Agent cappable of gathering all the dataset data from the PayRetailers websites and keep a Vector Store with Embeggins up to date. It can provide specific responses to anything asked about PayRetailers, using the information from the company as context.
 
-- In addition, we implemented a Buy Agent integrated with the PayRetailers sandbox payment API cappable of helping users buy any product from any e-commerce store.
+- In addition, we implemented a Buy Agent integrated with the PayRetailers sandbox payment API cappable of helping users buy any product from any e-commerce store. It uses an OpenAI LLM to analyse a screenshot and provide the details from it to generate the sandbox payment link from PayRetailers.
 
 Both the Chat Agent and the Buy Agent are made available through a JavaScript code snippet, which communicates with the main API, which communicates with OpenAI & the client to provides the responses and display them to the end user.
 
