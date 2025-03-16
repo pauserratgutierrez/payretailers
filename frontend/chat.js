@@ -226,30 +226,17 @@ function createInputArea() {
 // Configurar los event listeners
 function setupEventListeners() {
     // Event listeners para el botón flotante
-    elements.floatingButton.addEventListener('mouseover', () => {
-        elements.floatingButton.style.backgroundColor = 'rgb(255, 219, 120)';
-    });
-
-    elements.floatingButton.addEventListener('mouseout', () => {
-        elements.floatingButton.style.backgroundColor = '#f9c32f';
-    });
-
+    elements.floatingButton.addEventListener('mouseover', () => elements.floatingButton.style.backgroundColor = 'rgb(255, 219, 120)' );
+    elements.floatingButton.addEventListener('mouseout', () => elements.floatingButton.style.backgroundColor = '#f9c32f');
     elements.floatingButton.addEventListener('click', toggleOptionsMenu);
     
     // Event listeners para los botones de opciones
-    elements.buyButton.addEventListener('click', () => {
-        openChatWithMode('buy');
-    });
-    
-    elements.infoButton.addEventListener('click', () => {
-        openChatWithMode('info');
-    });
+    elements.buyButton.addEventListener('click', () => openChatWithMode('buy') );
+    elements.infoButton.addEventListener('click', () => openChatWithMode('info') );
     
     // Event listeners para el input y botón de enviar
     elements.chatInput.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            manageSend();
-        }
+        if (event.key === 'Enter') manageSend()
     });
 
     elements.chatSendButton.addEventListener('click', manageSend);
@@ -281,9 +268,7 @@ function openChatWithMode(mode) {
     elements.optionsContainer.style.display = 'none';
     
     // Limpiar el contenido anterior del chat si existe
-    if (elements.chatBody) {
-        elements.chatBody.innerHTML = '';
-    }
+    if (elements.chatBody) elements.chatBody.innerHTML = '';
     
     // Añadir el chat al DOM
     document.body.appendChild(elements.chatContainer);
@@ -304,11 +289,8 @@ function questionari(string) {
 // Render mensaje inicial según el modo
 function renderInitialMessageByMode(mode) {
     let initialMessage;
-    if (mode === 'buy') {
-        initialMessage = getResponseDiv("Asegura't d'estar mostrant a la pantalla clarament el preu de la compra o producte");
-    } else {
-        initialMessage = getResponseDiv("Soc l'assistent d'informació de PayRetailers. Com puc ajudar-te?");
-    }
+    if (mode === 'buy') initialMessage = getResponseDiv("Asegura't d'estar mostrant a la pantalla clarament el preu de la compra o producte");
+    else initialMessage = getResponseDiv("Soc l'assistent d'informació de PayRetailers. Com puc ajudar-te?");
     
     elements.chatBody.appendChild(initialMessage);
 }
@@ -327,7 +309,7 @@ async function manageSend() {
 
         if (chatMode === 'buy') {
             userInfo.push(userMessage);
-            if(userInfo.length === 1) questionari("Introdueix únicament el teu cognom:");
+            if (userInfo.length === 1) questionari("Introdueix únicament el teu cognom:");
             else{
                 // Create camera button
                 const cameraButton = document.createElement('button');
@@ -357,8 +339,7 @@ async function manageSend() {
                 
                 // Add click event
                 cameraButton.addEventListener('click', async function () {
-                    //foto a la pantalla
-                    //base64imagen
+                    // foto a la pantalla (base64imagen)
                     document.querySelector('.chatbot').style.display = 'none';
                     let img;
 
@@ -367,13 +348,13 @@ async function manageSend() {
                         try {
                             // Demanar permís per capturar la pantalla
                             const stream = await navigator.mediaDevices.getDisplayMedia({ 
-                                // video: { 
-                                //     displaySurface: "browser",
-                                //     frameRate: 5
-                                // }
-                                video: true
+                                video: { 
+                                    displaySurface: "browser",
+                                    // frameRate: 5
+                                }
+                                // video: true
                             });
-                    
+
                             // Crear un element vídeo per mostrar la captura
                             const video = document.createElement("video");
                             video.srcObject = stream;
@@ -471,24 +452,6 @@ async function manageSend() {
         try {
             // Seleccionar el endpoint según el modo
             const endpoint = chatMode === 'buy' ? buyEndpoint : responseEndpoint;
-            
-            // Simulación de respuesta API - Reemplazar con llamada real según el modo
-            // let data;
-            // data = {
-            //     output_text: `PayRetailers és un proveïdor líder de serveis de pagament en línia, fundat el 2017, amb seu a Espanya i oficines regionals a diversos països d'Amèrica Llatina, com Mèxic, Argentina, Brasil, i altres. Ofereix més de 250 mètodes de pagament locals, facilitant així que els comerços acceptin pagaments en diverses monedes sense necessitat d'una entitat local.
-
-            //     ### Característiques Clau:
-            //     - **Integració Senzilla**: La seva API permet una integració ràpida amb plataformes de comerç electrònic, millorant l'experiència de compra dels clients.
-            //     - **Seguretat**: Utilitza tecnologia de tokenització per protegir les dades de pagament, garantint la seguretat en les transaccions.
-            //     - **Suport Local**: Disposa d'un equip d'experts en cada país on opera, proporcionant assessorament sobre els mètodes de pagament més adequats per a cada mercat.
-                
-            //     ### Beneficis:
-            //     - **Augment de Conversió**: Acceptar mètodes de pagament locals pot incrementar la taxa de conversió i la satisfacció del client.
-            //     - **Cobertura Regional**: Permet a les empreses expandir-se a mercats emergents amb un enfocament en les necessitats locals.
-                
-            //     Si necessites més informació específica o detalls sobre un aspecte concret de PayRetailers, no dubtis a preguntar!`,
-            //     response_id: 1
-            // };
 
             const response = await fetch(APIurl + responseEndpoint, {
                 method: 'POST',
@@ -503,10 +466,7 @@ async function manageSend() {
             
             charging = false;
 
-            if (typingIndicator.parentNode === elements.chatBody) {
-                elements.chatBody.removeChild(typingIndicator);
-            }
-
+            if (typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(typingIndicator);
             if (data.error) throw new Error(data.error);
             
             previousResponseId = data.response_id;
@@ -518,9 +478,7 @@ async function manageSend() {
             console.error('Error:', error);
             charging = false;
 
-            if (typingIndicator.parentNode === elements.chatBody) {
-                elements.chatBody.removeChild(typingIndicator);
-            }
+            if (typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(typingIndicator);
 
             // Show error message
             const errorMessage = messageComponent('En aquests moments no estic disponible', 'err');
@@ -631,9 +589,7 @@ function messageComponent(message, mode) {
         messageElement.style.padding = '0px 6px';
         messageElement.style.alignSelf = 'flex-start';
         messageElement.style.maxWidth = '100%';
-        if (mode === "err"){
-            messageElement.style.color = "#f9c32f";
-        }
+        if (mode === "err") messageElement.style.color = "#f9c32f";
     }
     
     return messageElement;
@@ -641,17 +597,11 @@ function messageComponent(message, mode) {
 
 // Funciones de scroll
 function scrollToBottom() {
-    elements.chatBody.scrollTo({
-        top: elements.chatBody.scrollHeight,
-        behavior: 'smooth'
-    });
+    elements.chatBody.scrollTo({ top: elements.chatBody.scrollHeight, behavior: 'smooth' });
 }
 
 function scrollToElement(element, offset) { 
-    elements.chatBody.scrollTo({
-        top: element.offsetTop - offset,
-        behavior: 'smooth'
-    });
+    elements.chatBody.scrollTo({ top: element.offsetTop - offset, behavior: 'smooth' });
 }
 
 // Inicializar chat
