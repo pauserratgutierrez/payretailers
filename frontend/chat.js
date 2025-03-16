@@ -21,6 +21,7 @@ const elements = {
     chatBody: null,
     chatInput: null,
     typingIndicator: null,
+    emojiElement: null,
 };
 
 // Inicialización del chat
@@ -185,10 +186,32 @@ function createChatHeader() {
     const chatHeader = document.createElement('div');
     chatHeader.style.background = 'linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(20, 67, 147) 100%)';
     chatHeader.style.padding = '10px';
+    chatHeader.style.borderBottom = '1px solid #fff';
     chatHeader.style.color = '#fff';
-    chatHeader.style.textAlign = 'center';
-    chatHeader.style.fontWeight = 'normal';
-    chatHeader.innerHTML = '<img width="110" height="31" src="https://www.payretailers.com/wp-content/uploads/2023/09/logo-light.svg" alt="Pay Retailers Logo" class="logo-pr ls-is-cached lazyloaded" data-src="https://www.payretailers.com/wp-content/uploads/2023/09/logo-light.svg" decoding="async" data-eio-rwidth="110" data-eio-rheight="31">';
+    chatHeader.style.display = 'flex';
+    chatHeader.style.alignItems = 'center';
+    chatHeader.style.justifyContent = 'space-between';
+    
+    // Left emoji
+    elements.emojiElement = document.createElement('div');
+    elements.emojiElement.style.fontSize = '24px';
+    elements.emojiElement.style.marginLeft = '10px';
+    elements.emojiElement.style.flex = '1';
+    
+    // Center logo container
+    const logoContainer = document.createElement('div');
+    logoContainer.style.flex = '2';
+    logoContainer.style.display = 'flex';
+    logoContainer.style.justifyContent = 'center';
+    logoContainer.innerHTML = '<img width="110" height="31" src="https://www.payretailers.com/wp-content/uploads/2023/09/logo-light.svg" alt="Pay Retailers Logo" class="logo-pr ls-is-cached lazyloaded" data-src="https://www.payretailers.com/wp-content/uploads/2023/09/logo-light.svg" decoding="async" data-eio-rwidth="110" data-eio-rheight="31">';
+    
+    // Empty right section for balance
+    const rightSection = document.createElement('div');
+    rightSection.style.flex = '1';
+    
+    chatHeader.appendChild(elements.emojiElement);
+    chatHeader.appendChild(logoContainer);
+    chatHeader.appendChild(rightSection);
     
     return chatHeader;
 }
@@ -262,6 +285,9 @@ function toggleOptionsMenu() {
 
 // Abrir chat según el modo seleccionado
 function openChatWithMode(mode) {
+    if (mode === 'buy') elements.emojiElement.textContent = '💳';
+    else elements.emojiElement.textContent = '✨';
+
     // Establecer el modo de chat
     chatMode = mode;
     
@@ -278,7 +304,6 @@ function openChatWithMode(mode) {
     // Mostrar mensaje inicial según el modo
     if(mode === 'info' && content) elements.chatBody.innerHTML = content;
     else renderInitialMessageByMode(mode);
-    if (mode === 'buy') questionari("Introdueix únicament el teu nom:");
 }
 
 function questionari(string) {
@@ -289,11 +314,12 @@ function questionari(string) {
 
 // Render mensaje inicial según el modo
 function renderInitialMessageByMode(mode) {
-    let initialMessage;
-    if (mode === 'buy') initialMessage = getResponseDiv("Asegura't d'estar mostrant a la pantalla clarament el preu de la compra o producte");
-    else initialMessage = getResponseDiv("Soc l'assistent d'informació de PayRetailers. Com puc ajudar-te?");
+    let initialMessages;
+    if (mode === 'buy') initialMessages = [getResponseDiv("Assegura't d'estar mostrant a la pantalla clarament el preu de la compra o producte"), getResponseDiv("Quin és el teu nom?")];
+        
+    else initialMessages = [getResponseDiv("Soc l'assistent d'informació de PayRetailers. Com puc ajudar-te?")];
     
-    elements.chatBody.appendChild(initialMessage);
+    initialMessages.forEach(div => elements.chatBody.appendChild(div));
 }
 
 // Funciones para el manejo de mensajes
@@ -310,13 +336,13 @@ async function manageSend() {
 
         if (chatMode === 'buy') {
             userInfo.push(userMessage);
-            if (userInfo.length === 1) questionari("Introdueix únicament el teu cognom:");
+            if (userInfo.length === 1) questionari("I el teu cognom?");
             else{
                 // Create camera button
                 const cameraButton = document.createElement('button');
                 cameraButton.innerHTML = '📷';
-                cameraButton.style.width = '60px';
-                cameraButton.style.height = '60px';
+                cameraButton.style.minWidth = '60px';
+                cameraButton.style.minHeight = '60px';
                 cameraButton.style.borderRadius = '50%';
                 cameraButton.style.backgroundColor = '#f9c32f';
                 cameraButton.style.border = 'none';
@@ -379,17 +405,23 @@ async function manageSend() {
                             
                         } catch (err) {
                             console.error("Error capturant la pantalla:", err);
+                            document.querySelector('.chatbot').style.display = 'flex';
+
                         }
                         finally {
                             charging = false;
-                            if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
+                            if (elements.typingIndicator && elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
+                            document.querySelector('.chatbot').style.display = 'flex';
                         } 
                     }
                     
                     img = await captureScreen();
 
+                    if (!img) return;
+
                     charging = true;
                     chargingAnimation();
+
 
                     // Now that captureScreen has fully completed, show the chat again
                     document.querySelector('.chatbot').style.display = 'flex';
@@ -609,6 +641,15 @@ function messageComponent(message, mode) {
         messageElement.style.padding = '0px 6px';
         messageElement.style.alignSelf = 'flex-start';
         messageElement.style.maxWidth = '100%';
+        if (chatMode === 'buy'){
+            messageElement.style.padding = '6px 10px';
+            messageElement.style.color = '#fff';
+            messageElement.style.minHeight = '30px';
+            messageElement.style.backgroundColor = '#e6f2ff';
+            messageElement.style.background ='linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(20, 67, 147) 100%)';
+            messageElement.style.borderRadius = '6px';
+            messageElement.style.maxWidth = '80%';
+        }
         if (mode === "err") messageElement.style.color = "#f9c32f";
     }
     
