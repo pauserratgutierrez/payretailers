@@ -380,6 +380,10 @@ async function manageSend() {
                         } catch (err) {
                             console.error("Error capturant la pantalla:", err);
                         }
+                        finally {
+                            charging = false;
+                            if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
+                        } 
                     }
                     
                     img = await captureScreen();
@@ -403,6 +407,7 @@ async function manageSend() {
                         });
                         const data = await response.json();
                         charging = false;
+                        if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
 
                         if (data.form_action) {
                             // Create and display link
@@ -421,11 +426,16 @@ async function manageSend() {
                     catch (error) {
                         console.error('Error:', error);
                         charging = false;
+                        if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
                         // Show error message
                         const errorMessage = messageComponent('En aquests moments no estic disponible', 'err');
                         elements.chatBody.appendChild(errorMessage);
                         scrollToElement(errorMessage, 110);
-                    }     
+                    }    
+                    finally {
+                        charging = false;
+                        if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
+                    } 
                 });
 
                 const instructionsDiv = getResponseDiv("Es farà una foto de la pantalla actual. Assegura't que el producte i el preu estiguin clarament visibles.");
