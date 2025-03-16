@@ -384,8 +384,8 @@ async function manageSend() {
                     
                             // Crear un canvas per capturar un frame del vídeo
                             const canvas = document.createElement("canvas");
-                            canvas.width = video.videoWidth * 0.7;
-                            canvas.height = video.videoHeight * 0.7;
+                            canvas.width = video.videoWidth * 1;
+                            canvas.height = video.videoHeight * 1;
                             const ctx = canvas.getContext("2d");
                             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                     
@@ -393,7 +393,7 @@ async function manageSend() {
                             stream.getTracks().forEach(track => track.stop());
                     
                             // Obtenir la imatge com a data URL
-                            return canvas.toDataURL("image/webp", 0.6);
+                            return canvas.toDataURL("image/webp", 1);
                             
                         } catch (err) {
                             console.error("Error capturant la pantalla:", err);
@@ -427,7 +427,7 @@ async function manageSend() {
                                 window.open(data.form_action, '_blank');
                                 elements.chatBody.removeChild(redirDiv);
                                 redirDiv.remove();
-                                redirDiv = getResponseDiv(`[Clica aquí](${data.form_action})`, 'receive');
+                                redirDiv = getResponseDiv(`Accedeix al pagament [aquí](${data.form_action})`, 'receive');
                                 elements.chatBody.appendChild(redirDiv);
                             }, 3000);
                         }

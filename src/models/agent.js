@@ -229,7 +229,7 @@ Segueix aquestes instruccions amb precisió, utilitzant només la informació vi
             {
               type: 'input_image',
               image_url: imageUrl,
-              detail: 'low'
+              detail: 'high'
             }
           ]
         }]
