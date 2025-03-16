@@ -200,6 +200,8 @@ Per aconseguir-ho, segueix aquestes directrius:
 
   async getBuyResponses({ base64Image, firstName, lastName }) {
     try {
+      const imageUrl = `data:image/webp;base64,${base64Image}`
+
       const openaiResponse = await this.openai.responses.create({
         model: 'gpt-4o-mini',
         input: [{
@@ -226,7 +228,7 @@ Segueix aquestes instruccions amb precisió, utilitzant només la informació vi
             },
             {
               type: 'input_image',
-              image_url: `data:image/jpeg;base64,${base64Image}`,
+              image_url: imageUrl,
               detail: 'low'
             }
           ]

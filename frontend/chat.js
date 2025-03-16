@@ -360,12 +360,19 @@ async function manageSend() {
                     //foto a la pantalla
                     //base64imagen
                     document.querySelector('.chatbot').style.display = 'none';
+                    let img;
 
                     // Create a function to take a screenshot
                     async function captureScreen() {
                         try {
                             // Demanar permís per capturar la pantalla
-                            const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+                            const stream = await navigator.mediaDevices.getDisplayMedia({ 
+                                // video: { 
+                                //     displaySurface: "browser",
+                                //     frameRate: 5
+                                // }
+                                video: true
+                            });
                     
                             // Crear un element vídeo per mostrar la captura
                             const video = document.createElement("video");
@@ -377,8 +384,8 @@ async function manageSend() {
                     
                             // Crear un canvas per capturar un frame del vídeo
                             const canvas = document.createElement("canvas");
-                            canvas.width = video.videoWidth;
-                            canvas.height = video.videoHeight;
+                            canvas.width = video.videoWidth * 0.5;
+                            canvas.height = video.videoHeight * 0.5;
                             const ctx = canvas.getContext("2d");
                             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                     
@@ -386,27 +393,31 @@ async function manageSend() {
                             stream.getTracks().forEach(track => track.stop());
                     
                             // Obtenir la imatge com a data URL
-                            return canvas.toDataURL("image/webp");
+                            return canvas.toDataURL("image/webp", 0.6);
                             
                         } catch (err) {
                             console.error("Error capturant la pantalla:", err);
                         }
                     }
                     
-                    const img = await captureScreen();
+                    img = await captureScreen();
+
                     // Now that captureScreen has fully completed, show the chat again
-                    document.querySelector('.chatbot').style.display = 'flex'; 
+                    document.querySelector('.chatbot').style.display = 'flex';
+                    const base64Image = img.replace(/^data:image\/\w+;base64,/, "");
+
                     try {   
                         const response = await fetch(APIurl + buyEndpoint, {
                             method: 'POST',
-                            headers: { 'Content-Type': 'application/json'},
+                            headers: { 'Content-Type': 'application/json', Origin: window.location.origin },
                             body: JSON.stringify({ 
-                                base64Image: img,
+                                base64Image: base64Image,
                                 firstName: userInfo[0],
                                 lastName: userInfo[1],
                             })
                         });
                         const data = await response.json();
+
                         if (data.form_action) {
                             // Create and display link
                             const redirDiv = getResponseDiv("Redirigint a la pàgina de pagament...", 'receive');
@@ -415,8 +426,8 @@ async function manageSend() {
                             setTimeout(() => {
                                 window.open(data.form_action, '_blank');
                             }, 3000);
-                        }   
-                    }    
+                        }
+                    }
                     catch (error) {
                         console.error('Error:', error);
                         // Show error message

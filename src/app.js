@@ -19,12 +19,13 @@ const agentModel = new AgentModel({
 
 // API Server
 const server = express()
-server.use(json())
+server.use(json({  limit: '50mb' }))
 server.disable('x-powered-by')
 
 // CORS Middleware
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
