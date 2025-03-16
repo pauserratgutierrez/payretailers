@@ -1,6 +1,10 @@
 # HACKUAB - UABTHEHACK | Hackathon 2025
 [Página Web](https://www.uabthehack.cat/)
 
+- Start: 15/03/2025 at 12:00
+- End: 16/03/2025 at 12:00
+- Team Members: Genís Carretero Ferrete & Pau Serrat Gutiérrez
+
 ## Project Requisites
 [PayRetailers Info](https://bitbucket.org/payretailers/uab-the-hack-payretailers/src/main/)
 
@@ -14,13 +18,19 @@ Our project implementation followed a two way solution.
 
 Both the Chat Agent and the Buy Agent are made available through a JavaScript code snippet, which communicates with the main API, which communicates with OpenAI & the client to provides the responses and display them to the end user.
 
-# Requeriments
+## Requeriments
 Clone the `.env.example` and populate it with your environment api keys and variables.
-
-## Execute the APP
-To run the main API: `npm run start`
-To run the crawler and extract the dataset: `npm run crawl`
 
 ## Project Structure
 - `dataset`: Will contain all the dataset for the Vector Store, provided by the crawler
-- `src/`: Contains all the code for the Agent API
+- `src/`: Contains all the code for the Agent API, organized. Using a model - controller approach.
+- `frontend` contains the JS code snippet
+
+## Execute the APP
+1. To run the main API:
+- `npm run start`. This will open the API on `https://localhost` (using specified port from `.env`)
+- Open any website (chrome preferible). Open Developer Tools -> Console and paste the JS from the `frontend/chat.js` folder.
+- The chat bubble will appear on the bottom right corner of the website. It will automatically connect to the API, and do the dataset sync to have the most up to date vector store with the dataset files. It uses GitHub sha hashes and sha hashes stored in the vector store files to optimize vector store syncing and improve responses and costs.
+
+2. To run the crawler and extract the dataset: `npm run crawl`
+- The process will start, the website will be crawled and the content extracted.
