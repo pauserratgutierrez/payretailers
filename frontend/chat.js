@@ -561,7 +561,7 @@ function parseMarkdown(markdown) {
         .replace(/^# (.*$)/gm, '<h1 style="font-size: 17px; margin: 0; font-weight:900;">$1</h1>')
         .replace(/\*\*(.*?)\*\*/g, '<strong style="font-weight: 600;">$1</strong>')
         .replace(/\*(.*?)\*/g, '<em style="font-style: italic;">$1</em>')
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color: rgb(20, 67, 147); text-decoration: none;">$1</a>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color: yellow; text-decoration: none;">$1</a>')
         .replace(/- (.*$)/gm, '<li>$1</li>')
         .replace(/<li>(.*?)<\/li>/g, '<ul style="margin: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important;"><li>$1</li></ul>')
         .replace(/<\/ul><ul.*?>/g, '') 
