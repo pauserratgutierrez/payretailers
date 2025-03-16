@@ -1,5 +1,6 @@
 import { toFile } from 'openai'
 import { GHContent, GHMetadata } from '../utils/github/utils.js'
+import { makePayment } from '../utils/payretailers/pay.js'
 
 export class AgentModel {
   constructor({ openai, vectorStoreParams, dataset }) {
@@ -153,16 +154,20 @@ export class AgentModel {
     }
   }
 
-  async getResponse({ input, vectorStoreId, previous_response_id }) {
+  async getDatasetResponses({ input, vectorStoreId, previous_response_id }) {
     try {
       const response = await this.openai.responses.create({
         input,
         model: 'gpt-4o-mini',
         instructions:
-`Ets 'PayRetailers Agent', l'agent d'intel·ligència artificial per a PayRetailers. Sigues concís i resolutiu. Recorda:
-- Tens accés a tota la informació de les pàgines "https://payretailers.com/" i "https://payretailers.dev/" mitjançant la tool "file_search".
-- Quan retornis codi, aquest ha d'estar envoltat amb tres cometes inverses \`\`\`codi\`\`\` i indenta amb 2 espais.
-- Si no trobes la infromació que necessites, informa-ho obertament sense inventar res. Si necessites més context per respondre adequadament, demana més informació a l'usuari.`,
+`Ets "PayRetailers Agent", l'agent d'intel·ligència artificial especialitzat per a PayRetailers. La teva tasca és oferir respostes clares, concises i precises.
+
+Per aconseguir-ho, segueix aquestes directrius:
+  - Utilitza tota la informació disponible a les pàgines "https://payretailers.com/" i "https://payretailers.dev/" a través de la tool "file_search".
+  - Si no trobes la informació necessària, informa-ho obertament sense inventar res.
+  - Si necessites més context o detalls per respondre adequadament, demana'ls a l'usuari.
+  - Mantingues un to directe, resolutiu i enfocat en oferir la millor resposta possible.
+  - Quan retornis codi, aquest ha d'estar envoltat amb tres cometes inverses \`\`\`codi\`\`\` i indetat amb 2 espais per nivell d'indentació.`,
         previous_response_id,
         store: true,
         stream: false,
@@ -178,9 +183,92 @@ export class AgentModel {
         ],
         truncation: 'auto'
       })
+
+      // Calculate cost
+      const usage = { 'gpt-4o-mini': { promptTokenCost: 0.15 / 1000000, completionTokenCost: 0.6 / 1000000 } }
+      const inputTokensCost = response.usage.input_tokens * usage['gpt-4o-mini'].promptTokenCost
+      const outputTokensCost = response.usage.output_tokens * usage['gpt-4o-mini'].completionTokenCost
+      const totalCost = inputTokensCost + outputTokensCost
+      console.log(`Response generated with ID: ${response.id}. Total cost: $${totalCost.toFixed(4)}`)
+
       return response
     } catch (error) {
-      console.error('Error in getResponse:', error)
+      console.error('Error in getDatasetResponses:', error)
+      throw error
+    }
+  }
+
+  async getBuyResponses({ base64Image, firstName, lastName }) {
+    try {
+      const openaiResponse = await this.openai.responses.create({
+        model: 'gpt-4o-mini',
+        input: [{
+          role: 'user',
+          content: [
+            {
+              type: 'input_text',
+              text: 
+`Ets un model d’interpretació d’imatges especialitzat en ecommerce. Se’t proporciona una captura de pantalla d’una pàgina de producte d’un ecommerce. La teva tasca és identificar i extreure amb precisió dos elements clau de la imatge:
+  
+  - **Preu del producte:** Inclou la quantitat sense la moneda (per exemple, "29,99").
+  - **Descripció del producte:** Text que resumeix les característiques i especificacions principals.
+
+**Instruccions:**
+1. Analitza detalladament l’imatge per detectar el text visible que representi el preu i la descripció.
+2. Si es detecten múltiples preus o descripcions, selecciona l’element que correspongui al producte principal de la pàgina.
+3. Si algun dels elements no és clar o no es pot identificar, retorna el valor \`null\` per aquest camp.
+4. La resposta ha d’estar estructurada en format JSON amb les claus \`"preu"\` i \`"descripcio"\`.
+
+**Exemple de resposta:**
+{ "preu": "29,99", "descripcio": "Camiseta 100% cotó, talla M, amb estampat modern." }
+
+Segueix aquestes instruccions amb precisió, utilitzant només la informació visible a la imatge, sense afegir suposicions externes.`
+            },
+            {
+              type: 'input_image',
+              image_url: `data:image/jpeg;base64,${base64Image}`,
+              detail: 'low'
+            }
+          ]
+        }]
+      })
+
+      const { preu, descripcio } = JSON.parse(openaiResponse.output_text)
+
+      const paymentData = {
+        paymentMethodId: 'b04f2ffd-0751-4771-9d07-e9c866977896',
+        // amount: '10000',
+        amount: preu,
+        currency: 'BRL',
+        // description: 'Test Demo',
+        description: descripcio,
+        trackingId: 'Test-Tracking',
+        notificationUrl: 'https://link.com/notification',
+        returnUrl: 'https://link.com/return',
+        cancelUrl: 'https://link.com/cancel',
+        language: 'ES',
+        customer: {
+          firstName,
+          lastName,
+          email: 'test@gmail.com',
+          country: 'BR',
+          personalId: '49586181049',
+          city: 'Buenos Aires',
+          address: 'dsa',
+          zip: '130',
+          phone: '1149682315',
+          deviceId: 'DEVICE',
+          ip: '181.166.176.12'
+        }
+      }
+
+      const paymentResponse = await makePayment(paymentData)
+      if (paymentResponse.status === 'FAILED') console.error(`Payment failed with message: ${paymentResponse.message}`)
+      if (paymentResponse.form && paymentResponse.form.action) console.log(`Redirect URL for payment completion: ${paymentResponse.form.action}`)
+      
+      return { form_action: paymentResponse.form.action }
+    } catch (error) {
+      console.error('Error in getBuyResponses:', error)
       throw error
     }
   }

@@ -8,7 +8,8 @@ export function createAgentRouter({ agentModel }) {
   const agentController = new AgentController({ agentModel })
 
   agentRouter.get('/dataset/setup', agentController.setupDataset)
-  agentRouter.post('/response', agentController.getResponse)
+  agentRouter.post('/dataset/responses', agentController.getDatasetResponses)
+  agentRouter.post('/buy/responses', agentController.getBuyResponses)
 
   return agentRouter
 }
