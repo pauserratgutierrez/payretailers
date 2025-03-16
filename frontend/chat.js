@@ -384,8 +384,8 @@ async function manageSend() {
                     
                             // Crear un canvas per capturar un frame del vídeo
                             const canvas = document.createElement("canvas");
-                            canvas.width = video.videoWidth * 0.5;
-                            canvas.height = video.videoHeight * 0.5;
+                            canvas.width = video.videoWidth * 0.7;
+                            canvas.height = video.videoHeight * 0.7;
                             const ctx = canvas.getContext("2d");
                             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                     
@@ -420,11 +420,15 @@ async function manageSend() {
 
                         if (data.form_action) {
                             // Create and display link
-                            const redirDiv = getResponseDiv("Redirigint a la pàgina de pagament...", 'receive');
+                            var redirDiv = getResponseDiv("Redirigint a la pàgina de pagament...", 'receive');
                             elements.chatBody.appendChild(redirDiv);
                             scrollToElement(redirDiv, 110);
                             setTimeout(() => {
                                 window.open(data.form_action, '_blank');
+                                elements.chatBody.removeChild(redirDiv);
+                                redirDiv.remove();
+                                redirDiv = getResponseDiv(`${data.form_action}`, 'receive');
+                                elements.chatBody.appendChild(redirDiv);
                             }, 3000);
                         }
                     }
