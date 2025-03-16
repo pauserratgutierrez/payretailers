@@ -222,7 +222,7 @@ Per aconseguir-ho, segueix aquestes directrius:
 4. La resposta ha d’estar estructurada en format JSON amb les claus \`"preu"\` i \`"descripcio"\`.
 
 **Exemple de resposta:**
-{ "preu": "29,99", "descripcio": "Camiseta 100% cotó, talla M, amb estampat modern." }
+{ "preu": "29.99", "descripcio": "Camiseta 100% cotó, talla M, amb estampat modern." }
 
 Segueix aquestes instruccions amb precisió, utilitzant només la informació visible a la imatge, sense afegir suposicions externes.`
             },
