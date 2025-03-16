@@ -346,11 +346,11 @@ async function manageSend() {
                 cameraButton.style.borderRadius = '50%';
                 cameraButton.style.backgroundColor = '#f9c32f';
                 cameraButton.style.border = 'none';
-                cameraButton.style.fontSize = '30px';
+                cameraButton.style.fontSize = '26px';
                 cameraButton.style.cursor = 'pointer';
-                cameraButton.style.margin = '20px auto';
+                cameraButton.style.margin = 'auto';
                 cameraButton.style.display = 'block';
-                cameraButton.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                // cameraButton.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
                 cameraButton.style.transition = 'all 0.3s ease';
                 
                 // Add hover effects
@@ -470,7 +470,7 @@ async function manageSend() {
                     } 
                 });
 
-                const instructionsDiv = getResponseDiv("Es farà una foto de la pantalla actual. Assegura't que el producte i el preu estiguin clarament visibles.");
+                const instructionsDiv = getResponseDiv("Clica la càmera i faré una captura. El preu i la descripció del producte han de ser clarament visibles en pantalla.");
                 elements.chatBody.appendChild(instructionsDiv);
                 
                 elements.chatBody.appendChild(cameraButton);
