@@ -34,3 +34,13 @@ Clone the `.env.example` and populate it with your environment api keys and vari
 
 2. To run the crawler and extract the dataset: `npm run crawl`
 - The process will start, the website will be crawled and the content extracted.
+
+## Images
+The Chat Bubble (Bottom Right corner)
+![image](https://github.com/user-attachments/assets/4570b306-e9b0-429a-aa9e-56f9a40981ec)
+AI Agent In Action
+![image](https://github.com/user-attachments/assets/939f20d8-b5e8-4960-8489-27f7aeec8635)
+AI Buy Agent In Action
+![image](https://github.com/user-attachments/assets/faade160-607e-429b-87fb-b76b35c5932b)
+PayRetailers Generated Payment Link from AI Agent
+![image](https://github.com/user-attachments/assets/ce2d0c79-c60a-43a0-8cc7-341cb75ef7d5)
