@@ -19,7 +19,8 @@ const elements = {
     infoButton: null,
     chatContainer: null,
     chatBody: null,
-    chatInput: null
+    chatInput: null,
+    typingIndicator: null,
 };
 
 // Inicialización del chat
@@ -457,7 +458,7 @@ async function manageSend() {
             
             charging = false;
 
-            if (typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(typingIndicator);
+            if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
             if (data.error) throw new Error(data.error);
             
             previousResponseId = data.response_id;
@@ -469,7 +470,7 @@ async function manageSend() {
             console.error('Error:', error);
             charging = false;
 
-            if (typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(typingIndicator);
+            if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
 
             // Show error message
             const errorMessage = messageComponent('En aquests moments no estic disponible', 'err');
@@ -482,13 +483,13 @@ async function manageSend() {
         const chargingBalls = [' ', '●', '●●', '●●●'];
 
         // Show typing indicator
-        const typingIndicator = messageComponent('', 'receive');
-        elements.chatBody.appendChild(typingIndicator);
+        elements.typingIndicator = messageComponent('', 'receive');
+        elements.chatBody.appendChild(elements.typingIndicator);
         scrollToBottom();
 
         (function changeChargingBalls() {
             if (charging) {
-                typingIndicator.textContent = chargingBalls[0];
+                elements.typingIndicator.textContent = chargingBalls[0];
                 chargingBalls.push(chargingBalls.shift());
                 scrollToBottom();
                 setTimeout(changeChargingBalls, 500);
