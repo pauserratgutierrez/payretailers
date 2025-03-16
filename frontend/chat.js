@@ -7,6 +7,7 @@ const buyEndpoint = '/buy/responses';
 let vectorStoreId;
 let previousResponseId;
 var opened = false;
+var charging = false;
 let chatMode = ''; // 'info' o 'buy'
 let content;
 const userInfo = [];
@@ -315,11 +316,22 @@ function questionari(string) {
 // Render mensaje inicial según el modo
 function renderInitialMessageByMode(mode) {
     let initialMessages;
-    if (mode === 'buy') initialMessages = [getResponseDiv("Assegura't d'estar mostrant a la pantalla clarament el preu de la compra o producte"), getResponseDiv("Quin és el teu nom?")];
+    if (mode === 'buy') {
+        initialMessages = [getResponseDiv("Assegura't d'estar mostrant a la pantalla clarament el preu de la compra o producte")];
+        setTimeout(() => {
+            charging = false;
+            if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
+            elements.chatBody.appendChild(getResponseDiv("Quin és el teu nom?"));
+        }, 2000);
+    }
         
     else initialMessages = [getResponseDiv("Soc l'assistent d'informació de PayRetailers. Com puc ajudar-te?")];
     
     initialMessages.forEach(div => elements.chatBody.appendChild(div));
+    if (mode === 'buy') {
+        charging = true;
+        chargingAnimation();
+    }
 }
 
 // Funciones para el manejo de mensajes
@@ -336,7 +348,15 @@ async function manageSend() {
 
         if (chatMode === 'buy') {
             userInfo.push(userMessage);
-            if (userInfo.length === 1) questionari("I el teu cognom?");
+            if (userInfo.length === 1) {
+                charging = true;
+                chargingAnimation();
+                setTimeout(() => {
+                    charging = false;
+                    if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
+                    questionari("I el teu cognom?")
+                }, 2000);
+            }
             else{
                 // Create camera button
                 const cameraButton = document.createElement('button');
@@ -407,6 +427,10 @@ async function manageSend() {
                             console.error("Error capturant la pantalla:", err);
                             document.querySelector('.chatbot').style.display = 'flex';
 
+                            const errorMessage = messageComponent('En aquests moments no estic disponible', 'err');
+                            elements.chatBody.appendChild(errorMessage);
+                            scrollToElement(errorMessage, 110);
+
                         }
                         finally {
                             charging = false;
@@ -470,11 +494,17 @@ async function manageSend() {
                     } 
                 });
 
-                const instructionsDiv = getResponseDiv("Clica la càmera i faré una captura. El preu i la descripció del producte han de ser clarament visibles en pantalla.");
-                elements.chatBody.appendChild(instructionsDiv);
+                charging = true;
+                chargingAnimation();
                 
-                elements.chatBody.appendChild(cameraButton);
-                scrollToBottom();
+                setTimeout(() => {
+                    charging = false;
+                    if (elements.typingIndicator.parentNode === elements.chatBody) elements.chatBody.removeChild(elements.typingIndicator);
+                    const instructionsDiv = getResponseDiv("Clica la càmera i faré una captura. El preu i la descripció del producte han de ser clarament visibles en pantalla.");
+                    elements.chatBody.appendChild(instructionsDiv);
+                    elements.chatBody.appendChild(cameraButton);
+                    scrollToBottom();
+                }, 2000);
                 
             }
             return;
@@ -519,24 +549,6 @@ async function manageSend() {
             elements.chatBody.appendChild(errorMessage);
             scrollToElement(errorMessage, 110);
         }
-    }
-
-    function chargingAnimation () {
-        const chargingBalls = [' ', '●', '●●', '●●●'];
-
-        // Show typing indicator
-        elements.typingIndicator = messageComponent('', 'receive');
-        elements.chatBody.appendChild(elements.typingIndicator);
-        scrollToBottom();
-
-        (function changeChargingBalls() {
-            if (charging) {
-                elements.typingIndicator.textContent = chargingBalls[0];
-                chargingBalls.push(chargingBalls.shift());
-                scrollToBottom();
-                setTimeout(changeChargingBalls, 500);
-            }
-        })();
     }
 }
 
@@ -654,6 +666,24 @@ function messageComponent(message, mode) {
     }
     
     return messageElement;
+}
+
+function chargingAnimation () {
+    const chargingBalls = [' ', '●', '●●', '●●●'];
+
+    // Show typing indicator
+    elements.typingIndicator = messageComponent('', 'receive');
+    elements.chatBody.appendChild(elements.typingIndicator);
+    scrollToBottom();
+
+    (function changeChargingBalls() {
+        if (charging) {
+            elements.typingIndicator.textContent = chargingBalls[0];
+            chargingBalls.push(chargingBalls.shift());
+            scrollToBottom();
+            setTimeout(changeChargingBalls, 500);
+        }
+    })();
 }
 
 // Funciones de scroll
