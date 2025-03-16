@@ -210,16 +210,16 @@ Per aconseguir-ho, segueix aquestes directrius:
             {
               type: 'input_text',
               text: 
-`Ets un model d’interpretació d’imatges especialitzat en ecommerce. Se’t proporciona una captura de pantalla d’una pàgina de producte d’un ecommerce. La teva tasca és identificar i extreure amb precisió dos elements clau de la imatge:
+`Ets un model d'interpretació d'imatges especialitzat en ecommerce. Se't proporciona una captura de pantalla d'una pàgina de producte d'un ecommerce. La teva tasca és identificar i extreure amb precisió dos elements clau de la imatge:
   
-  - **Preu del producte:** Inclou la quantitat sense la moneda (per exemple, "29,99").
-  - **Descripció del producte:** Text que resumeix les característiques i especificacions principals.
+  - **Preu del producte:** Inclou la quantitat sense el nom de la moneda ni el símbol (per exemple, "29.99"). Ha de ser de tipus numèric.
+  - **Descripció del producte:** Text que resumeix les característiques i especificacions principals. Ha de ser de tipus text.
 
 **Instruccions:**
-1. Analitza detalladament l’imatge per detectar el text visible que representi el preu i la descripció.
-2. Si es detecten múltiples preus o descripcions, selecciona l’element que correspongui al producte principal de la pàgina.
-3. Si algun dels elements no és clar o no es pot identificar, retorna el valor \`null\` per aquest camp.
-4. La resposta ha d’estar estructurada en format JSON amb les claus \`"preu"\` i \`"descripcio"\`.
+1. Analitza detalladament l'imatge per detectar el text visible que representi el preu i la descripció.
+2. Si es detecten múltiples preus o descripcions, selecciona l'element que correspongui al producte principal de la pàgina.
+3. Si algun dels elements no és clar o no es pot identificar, retorna el valor \`no especificada\` per aquest camp.
+4. La resposta ha d'estar estructurada en format JSON amb les claus \`"preu"\` i \`"descripcio"\` sense cap format addicional ni markdown.
 
 **Exemple de resposta:**
 { "preu": "29.99", "descripcio": "Camiseta 100% cotó, talla M, amb estampat modern." }
@@ -235,12 +235,27 @@ Segueix aquestes instruccions amb precisió, utilitzant només la informació vi
         }]
       })
 
-      const { preu, descripcio } = JSON.parse(openaiResponse.output_text)
+      let jsonData
+      try {
+        jsonData = JSON.parse(openaiResponse.output_text)
+      } catch (error) {
+        const jsonMatch = openaiResponse.output_text.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+        if (jsonMatch && jsonMatch[1]) {
+          jsonData = JSON.parse(jsonMatch[1].trim());
+        } else {
+          // If no JSON found in markdown, throw the original error
+          throw new Error(`Could not parse JSON from response: ${openaiResponse.output_text}`);
+        }
+      }
+
+      const { preu, descripcio } = jsonData
+      const preuCentims = preu * 100
+      console.log(`Buy response generated with ID: ${openaiResponse.id}. Preu: ${preu} (${preuCentims}), Descripció: ${descripcio}`)
 
       const paymentData = {
         paymentMethodId: 'b04f2ffd-0751-4771-9d07-e9c866977896',
         // amount: '10000',
-        amount: preu,
+        amount: `${preuCentims}`,
         currency: 'BRL',
         // description: 'Test Demo',
         description: descripcio,
