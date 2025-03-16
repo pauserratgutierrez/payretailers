@@ -427,7 +427,7 @@ async function manageSend() {
                                 window.open(data.form_action, '_blank');
                                 elements.chatBody.removeChild(redirDiv);
                                 redirDiv.remove();
-                                redirDiv = getResponseDiv(`${data.form_action}`, 'receive');
+                                redirDiv = getResponseDiv(`[Clica aquí](${data.form_action})`, 'receive');
                                 elements.chatBody.appendChild(redirDiv);
                             }, 3000);
                         }
