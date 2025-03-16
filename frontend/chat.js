@@ -401,6 +401,7 @@ async function manageSend() {
                             })
                         });
                         const data = await response.json();
+                        charging = false;
 
                         if (data.form_action) {
                             // Create and display link
@@ -418,6 +419,7 @@ async function manageSend() {
                     }
                     catch (error) {
                         console.error('Error:', error);
+                        charging = false;
                         // Show error message
                         const errorMessage = messageComponent('En aquests moments no estic disponible', 'err');
                         elements.chatBody.appendChild(errorMessage);
@@ -437,6 +439,7 @@ async function manageSend() {
 
         charging = true;
         chargingAnimation();
+        
         try {
             // Seleccionar el endpoint según el modo
             const endpoint = chatMode === 'buy' ? buyEndpoint : responseEndpoint;
@@ -475,9 +478,8 @@ async function manageSend() {
         }
     }
 
-    const chargingAnimation = () => {
+    function chargingAnimation () {
         const chargingBalls = [' ', '●', '●●', '●●●'];
-        let charging = true;
 
         // Show typing indicator
         const typingIndicator = messageComponent('', 'receive');
