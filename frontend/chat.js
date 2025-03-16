@@ -383,6 +383,9 @@ async function manageSend() {
                     
                     img = await captureScreen();
 
+                    charging = true;
+                    chargingAnimation();
+
                     // Now that captureScreen has fully completed, show the chat again
                     document.querySelector('.chatbot').style.display = 'flex';
                     const base64Image = img.replace(/^data:image\/\w+;base64,/, "");
@@ -432,23 +435,8 @@ async function manageSend() {
             return;
         }
 
-        const chargingBalls = [' ', '●', '●●', '●●●'];
-        let charging = true;
-        
-        // Show typing indicator
-        const typingIndicator = messageComponent('', 'receive');
-        elements.chatBody.appendChild(typingIndicator);
-        scrollToBottom();
-
-        (function changeChargingBalls() {
-            if (charging) {
-                typingIndicator.textContent = chargingBalls[0];
-                chargingBalls.push(chargingBalls.shift());
-                scrollToBottom();
-                setTimeout(changeChargingBalls, 500);
-            }
-        })();
-        
+        charging = true;
+        chargingAnimation();
         try {
             // Seleccionar el endpoint según el modo
             const endpoint = chatMode === 'buy' ? buyEndpoint : responseEndpoint;
@@ -485,6 +473,25 @@ async function manageSend() {
             elements.chatBody.appendChild(errorMessage);
             scrollToElement(errorMessage, 110);
         }
+    }
+
+    const chargingAnimation = () => {
+        const chargingBalls = [' ', '●', '●●', '●●●'];
+        let charging = true;
+
+        // Show typing indicator
+        const typingIndicator = messageComponent('', 'receive');
+        elements.chatBody.appendChild(typingIndicator);
+        scrollToBottom();
+
+        (function changeChargingBalls() {
+            if (charging) {
+                typingIndicator.textContent = chargingBalls[0];
+                chargingBalls.push(chargingBalls.shift());
+                scrollToBottom();
+                setTimeout(changeChargingBalls, 500);
+            }
+        })();
     }
 }
 
